@@ -2,7 +2,7 @@ using Core.CallMyTrade.Model;
 
 namespace Core.CallMyTrade.Options;
 
-public class CallMyTradeOptions
+public sealed class CallMyTradeOptions
 {
     public bool Enabled { get; set; }
     public VoIPProvider VoIpProvider { get; set; }

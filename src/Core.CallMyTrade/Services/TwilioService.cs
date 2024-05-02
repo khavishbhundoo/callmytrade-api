@@ -10,7 +10,7 @@ using Twilio.Types;
 
 namespace Core.CallMyTrade.Services;
 
-public class TwilioService : IVoIPService
+public sealed class TwilioService : IVoIPService
 {
     private readonly IOptionsMonitor<CallMyTradeOptions> _options;
     private readonly ILogger _logger;

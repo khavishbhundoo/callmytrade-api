@@ -1,6 +1,6 @@
 namespace Core.CallMyTrade.Options;
 
-public class Twilio
+public sealed class Twilio
 {
     public string? TwilioAccountSid { get; set; }
     public string? TwilioAuthToken { get; set; }

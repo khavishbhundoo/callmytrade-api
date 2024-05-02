@@ -1,6 +1,6 @@
 namespace Core.CallMyTrade.Model;
 
-public class CallRequest
+public sealed record CallRequest
 {
     public string? Message { get; init; }
 }

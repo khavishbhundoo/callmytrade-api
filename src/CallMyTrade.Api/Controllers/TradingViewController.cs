@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 
 namespace CallMyTrade.Controllers;
 
-public class TradingViewController : ControllerBase
+public sealed class TradingViewController : ControllerBase
 {
     private readonly IValidator<TradingViewRequest> _validator;
     private readonly IPhoneCallHandler _phoneCallHandler;

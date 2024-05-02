@@ -3,7 +3,7 @@ using Core.CallMyTrade;
 namespace CallMyTrade.Middleware;
 using System.Text.Json;
 
-public class ContentTypeValidationMiddleware
+public sealed class ContentTypeValidationMiddleware
 {
     private readonly RequestDelegate _next;
 

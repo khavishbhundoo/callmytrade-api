@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 
 namespace CallMyTrade.Options;
 
-public class FluentValidationOptions<TOptions> : IValidateOptions<TOptions> where TOptions : class
+public sealed class FluentValidationOptions<TOptions> : IValidateOptions<TOptions> where TOptions : class
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly string? _name;

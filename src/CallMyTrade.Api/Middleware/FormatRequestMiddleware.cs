@@ -5,7 +5,7 @@ using Core.CallMyTrade.Tradingview;
 
 namespace CallMyTrade.Middleware;
 
-public class FormatRequestMiddleware
+public sealed class FormatRequestMiddleware
 {
     private readonly RequestDelegate _next;
 
