@@ -54,6 +54,7 @@ app.UseAuthorization();
 
 //Middlewares
 app.UseMiddleware<ContentTypeValidationMiddleware>();
+app.UseMiddleware<FormatRequestMiddleware>();
 
 app.MapControllers();
 
