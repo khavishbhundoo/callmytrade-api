@@ -31,8 +31,8 @@ public class TradingViewController : ControllerBase
     [Produces("application/json")]
     [Route("/tradingview")]
     [ProducesResponseType(typeof(PhoneCallResponse), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status415UnsupportedMediaType)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status422UnprocessableEntity)]
-    [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status503ServiceUnavailable)]
     public async Task<IActionResult> TradingViewAsync([FromBody] TradingViewRequest tradingViewRequest,
         CancellationToken token)
     {

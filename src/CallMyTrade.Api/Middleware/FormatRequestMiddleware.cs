@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using Core.CallMyTrade;
 using Core.CallMyTrade.Tradingview;
 
 namespace CallMyTrade.Middleware;
@@ -27,7 +28,7 @@ public class FormatRequestMiddleware
             {
                 Text = requestBody
             };
-            var requestBodyBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(tradingViewRequest));
+            var requestBodyBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(tradingViewRequest, Utils.JsonSerializerOptions));
             context.Request.Body = new MemoryStream(requestBodyBytes);
             context.Request.ContentType = "application/json";
 

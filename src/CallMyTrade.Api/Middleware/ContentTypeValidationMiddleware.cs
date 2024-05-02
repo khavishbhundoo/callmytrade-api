@@ -1,3 +1,5 @@
+using Core.CallMyTrade;
+
 namespace CallMyTrade.Middleware;
 using System.Text.Json;
 
@@ -34,7 +36,7 @@ public class ContentTypeValidationMiddleware
                         }
                     }
                 };
-                await context.Response.WriteAsync( JsonSerializer.Serialize(failedResponse));
+                await context.Response.WriteAsync( JsonSerializer.Serialize(failedResponse, Utils.JsonSerializerOptions));
                 return;
             }
         }
