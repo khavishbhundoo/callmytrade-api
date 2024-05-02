@@ -8,6 +8,7 @@ public static class Utils
     public static readonly JsonSerializerOptions JsonSerializerOptions = new JsonSerializerOptions()
     {
         WriteIndented = true,
-        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
     };
 }

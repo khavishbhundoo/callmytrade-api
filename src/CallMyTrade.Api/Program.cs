@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using CallMyTrade.Middleware;
 using CallMyTrade.Options;
@@ -17,6 +18,7 @@ builder.Services.AddControllers()
         opts =>
         {
             opts.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+            opts.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower;
         });
 
 builder.Services.AddEndpointsApiExplorer();
