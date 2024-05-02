@@ -6,6 +6,7 @@ using Core.CallMyTrade.Options;
 using Core.CallMyTrade.Services;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,9 +40,17 @@ builder.Services.AddTransient<IPhoneCallHandler, PhoneCallHandler>();
 
 //Services
 builder.Services.AddKeyedSingleton<IVoIPService, TwilioService>("Twilio");
+var awsOptions = builder.Configuration.GetAWSOptions();
+builder.Services.AddDefaultAWSOptions(awsOptions);
 
+//Serilog
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
 
 var app = builder.Build();
+
+//Add support to logging request with SERILOG
+app.UseSerilogRequestLogging();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
