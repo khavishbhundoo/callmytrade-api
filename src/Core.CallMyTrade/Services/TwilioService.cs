@@ -34,6 +34,7 @@ public sealed class TwilioService : IVoIPService
                 to: new Twilio.Types.PhoneNumber(_options.CurrentValue.VoIpProvidersOptions!.Twilio!.ToPhoneNumber),
                 from: new Twilio.Types.PhoneNumber(_options.CurrentValue.VoIpProvidersOptions!.Twilio!.FromPhoneNumber)
             );
+            op.EnrichWith("twilioResult", call.Sid);
             op.Complete();
             return call.Sid;
         }
