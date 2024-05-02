@@ -1,0 +1,6 @@
+﻿services:
+  callmytrade.api:
+    image: callmytrade.api
+    build:
+      context: .
+      dockerfile: src/CallMyTrade.Api/Dockerfile
