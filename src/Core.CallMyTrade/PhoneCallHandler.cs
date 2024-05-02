@@ -17,7 +17,7 @@ public sealed class PhoneCallHandler : IPhoneCallHandler
         IServiceProvider keyedServiceProvider)
     {
         _options = options.MustNotBeNull();
-        _voIpService = keyedServiceProvider.GetRequiredKeyedService<IVoIPService>(_options.CurrentValue.VoIpProvider).MustNotBeNull();
+        _voIpService = keyedServiceProvider.GetRequiredKeyedService<IVoIPService>(_options.CurrentValue.VoIpProvider.ToString()).MustNotBeNull();
     }
 
     public string HandleCallPhoneAsync(CallRequest callRequest, CancellationToken cancellationToken)
