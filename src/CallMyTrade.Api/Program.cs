@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using CallMyTrade.Middleware;
 using CallMyTrade.Options;
 using Core.CallMyTrade;
 using Core.CallMyTrade.Options;
@@ -50,6 +51,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+
+//Middlewares
+app.UseMiddleware<ContentTypeValidationMiddleware>();
 
 app.MapControllers();
 
