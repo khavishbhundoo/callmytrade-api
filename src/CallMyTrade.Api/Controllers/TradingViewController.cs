@@ -1,4 +1,3 @@
-using System.Text;
 using Core.CallMyTrade;
 using Core.CallMyTrade.Model;
 using Core.CallMyTrade.Options;
@@ -76,7 +75,7 @@ public class TradingViewController : ControllerBase
         {
             result = _phoneCallHandler.HandleCallPhoneAsync(new CallRequest()
             {
-                Message = tradingViewRequest.Text!
+                Message = tradingViewRequest.Text
             }, token);
         }
         catch (Exception e)
