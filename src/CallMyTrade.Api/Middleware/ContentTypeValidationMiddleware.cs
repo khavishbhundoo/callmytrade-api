@@ -20,7 +20,7 @@ public sealed class ContentTypeValidationMiddleware
             // Perform content type validation
             if (context.Request.ContentType == null || 
                 (!context.Request.ContentType.StartsWith("application/json", StringComparison.OrdinalIgnoreCase) && 
-                 !context.Request.ContentType.StartsWith("plain/text", StringComparison.OrdinalIgnoreCase)))
+                 !context.Request.ContentType.StartsWith("text/plain", StringComparison.OrdinalIgnoreCase)))
             {
                 context.Response.StatusCode = StatusCodes.Status415UnsupportedMediaType;
                 context.Response.ContentType = "application/json";
