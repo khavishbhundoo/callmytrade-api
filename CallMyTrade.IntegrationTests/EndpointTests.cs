@@ -45,6 +45,6 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
         response.Content.Headers.ContentType.ShouldNotBeNull();
         response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
         var result = await response.Content.ReadAsStringAsync();
-        result.ShouldNotBe("");
+        result.ShouldNotBeNullOrEmpty();
     }
 }
