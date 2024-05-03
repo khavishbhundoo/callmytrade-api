@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Shouldly;
@@ -42,6 +43,29 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
 
         // Assert
         response.EnsureSuccessStatusCode();
+        response.Content.Headers.ContentType.ShouldNotBeNull();
+        response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
+        var result = await response.Content.ReadAsStringAsync();
+        result.ShouldNotBeNullOrEmpty();
+    }
+    
+    [Theory]
+    [InlineData("text/xml")]
+    public async Task GivenValidEndpointForTradingViewWithValidDataAndInvalidContentTypeThenReturnFailure(string contentType)
+    {
+        // Arrange
+        var client = _webApplicationFactory.CreateClient();
+
+        StringContent? content = new(
+            "BTCUSD Greater Than 9000",
+            Encoding.UTF8,
+            contentType);
+
+        // Act
+        var response = await client.PostAsync("/tradingview", content);
+
+        // Assert
+        response.StatusCode.ShouldBe(HttpStatusCode.UnsupportedMediaType);
         response.Content.Headers.ContentType.ShouldNotBeNull();
         response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
         var result = await response.Content.ReadAsStringAsync();
