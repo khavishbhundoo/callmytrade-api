@@ -28,7 +28,8 @@ public sealed class FormatRequestMiddleware
             {
                 Text = requestBody
             };
-            var requestBodyBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(tradingViewRequest, Utils.JsonSerializerOptions));
+            var tradingViewRequestJson = JsonSerializer.Serialize(tradingViewRequest, Utils.JsonSerializerOptions);
+            var requestBodyBytes = Encoding.UTF8.GetBytes(tradingViewRequestJson);
             context.Request.Body = new MemoryStream(requestBodyBytes);
             context.Request.ContentType = "application/json";
 

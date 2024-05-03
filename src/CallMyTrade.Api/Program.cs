@@ -72,6 +72,7 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseMiddleware<ContentTypeValidationMiddleware>();
 app.UseMiddleware<FormatRequestMiddleware>();
+app.UseRouting();
 
 app.MapControllers();
 
