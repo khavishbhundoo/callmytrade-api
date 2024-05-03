@@ -32,7 +32,7 @@ public sealed class ProtectEndpointMiddleware
             if (!ValidTradingViewIpAddresses.Contains(context.Request.HttpContext.Connection.RemoteIpAddress?.ToString()))
             {
                 context.Response.StatusCode = StatusCodes.Status403Forbidden;
-                context.Response.ContentType = "application/json";
+                context.Response.ContentType = "application/json; charset=utf-8";
                 var failedResponse = new FailedResponse()
                 {
                     ValidationErrors = new List<ValidationError>()

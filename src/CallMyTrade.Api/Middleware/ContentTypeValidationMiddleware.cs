@@ -23,7 +23,7 @@ public sealed class ContentTypeValidationMiddleware
                  !context.Request.ContentType.StartsWith("text/plain", StringComparison.OrdinalIgnoreCase)))
             {
                 context.Response.StatusCode = StatusCodes.Status415UnsupportedMediaType;
-                context.Response.ContentType = "application/json";
+                context.Response.ContentType = "application/json; charset=utf-8";
                 var failedResponse = new FailedResponse()
                 {
                     ValidationErrors = new List<ValidationError>()
