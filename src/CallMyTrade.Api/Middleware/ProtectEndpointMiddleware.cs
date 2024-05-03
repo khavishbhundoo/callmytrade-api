@@ -1,28 +1,37 @@
+using System.Text.Json;
 using Core.CallMyTrade;
 
 namespace CallMyTrade.Middleware;
-using System.Text.Json;
 
-public sealed class ContentTypeValidationMiddleware
+public sealed class ProtectEndpointMiddleware
 {
     private readonly RequestDelegate _next;
 
-    public ContentTypeValidationMiddleware(RequestDelegate next)
+    private static readonly List<string?> ValidTradingViewIpAddresses =
+    [
+        "52.89.214.238",
+        "34.212.75.30",
+        "54.218.53.128",
+        "52.32.178.7"
+    ];
+    
+    public ProtectEndpointMiddleware(RequestDelegate next)
     {
         _next = next;
     }
-
+    
     public async Task Invoke(HttpContext context)
     {
         // Check if the request path matches the specific route you want to validate
         if (context.Request.Path.Equals("/tradingview"))
         {
-            // Perform content type validation
-            if (context.Request.ContentType == null || 
-                (!context.Request.ContentType.StartsWith("application/json", StringComparison.OrdinalIgnoreCase) && 
-                 !context.Request.ContentType.StartsWith("plain/text", StringComparison.OrdinalIgnoreCase)))
+            /*
+             * Perform IP whitelisting
+             * Reference: https://www.tradingview.com/support/solutions/43000529348-about-webhooks/
+             */
+            if (!ValidTradingViewIpAddresses.Contains(context.Request.HttpContext.Connection.RemoteIpAddress?.ToString()))
             {
-                context.Response.StatusCode = StatusCodes.Status415UnsupportedMediaType;
+                context.Response.StatusCode = StatusCodes.Status403Forbidden;
                 context.Response.ContentType = "application/json";
                 var failedResponse = new FailedResponse()
                 {
@@ -30,9 +39,8 @@ public sealed class ContentTypeValidationMiddleware
                     {
                         new ValidationError()
                         {
-                            ErrorCode = "content_type_invalid",
-                            ErrorMessage =
-                                "Content-Type header missing or invalid. Tradingview will send either application/json or text/plain"
+                            ErrorCode = "ip_banned",
+                            ErrorMessage = "Only whitelisted IP addresses allowed"
                         }
                     }
                 };

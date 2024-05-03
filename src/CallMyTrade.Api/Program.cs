@@ -64,6 +64,10 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 //Middlewares
+if (!app.Environment.IsDevelopment())
+{ 
+    app.UseMiddleware<ProtectEndpointMiddleware>();
+}
 app.UseMiddleware<ContentTypeValidationMiddleware>();
 app.UseMiddleware<FormatRequestMiddleware>();
 
