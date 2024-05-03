@@ -1,5 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Amazon;
+using Amazon.CloudWatchLogs;
 using CallMyTrade.Middleware;
 using CallMyTrade.Options;
 using Core.CallMyTrade;
