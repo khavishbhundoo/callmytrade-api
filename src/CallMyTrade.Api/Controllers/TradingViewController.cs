@@ -1,9 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Core.CallMyTrade;
 using Core.CallMyTrade.Model;
 using Core.CallMyTrade.Options;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
 using Light.GuardClauses;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
@@ -35,21 +40,6 @@ public sealed class TradingViewController : ControllerBase
     public async Task<IActionResult> TradingViewAsync([FromBody] TradingViewRequest tradingViewRequest,
         CancellationToken token)
     {
-        if (!_options.CurrentValue.Enabled)
-        {
-            return StatusCode(StatusCodes.Status422UnprocessableEntity, new FailedResponse()
-            {
-                ValidationErrors = new List<ValidationError>()
-                {
-                    new ValidationError()
-                    {
-                        ErrorCode = "callmytrade_disabled",
-                        ErrorMessage = "CallMyTrade is currently disabled."
-                    }
-                }
-            });
-        }
-
         var validation = await _validator.ValidateAsync(tradingViewRequest, token);
 
         if (!validation.IsValid)

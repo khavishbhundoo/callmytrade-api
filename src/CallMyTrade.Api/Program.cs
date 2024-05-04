@@ -9,6 +9,10 @@ using Core.CallMyTrade.Options;
 using Core.CallMyTrade.Services;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -66,6 +70,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 //Middlewares
+app.UseMiddleware<IsCallMyTradeEnabledMiddleware>();
 if (!app.Environment.IsDevelopment())
 { 
     app.UseMiddleware<ProtectEndpointMiddleware>();

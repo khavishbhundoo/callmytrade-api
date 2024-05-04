@@ -1,7 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Core.CallMyTrade;
-
-namespace CallMyTrade.Middleware;
+using Microsoft.AspNetCore.Http;
 using System.Text.Json;
+namespace CallMyTrade.Middleware;
 
 public sealed class ContentTypeValidationMiddleware
 {
