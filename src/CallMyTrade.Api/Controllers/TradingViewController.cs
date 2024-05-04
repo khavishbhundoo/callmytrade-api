@@ -4,13 +4,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Core.CallMyTrade;
 using Core.CallMyTrade.Model;
-using Core.CallMyTrade.Options;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
 using Light.GuardClauses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace CallMyTrade.Controllers;
 
@@ -18,16 +16,13 @@ public sealed class TradingViewController : ControllerBase
 {
     private readonly IValidator<TradingViewRequest> _validator;
     private readonly IPhoneCallHandler _phoneCallHandler;
-    private readonly IOptionsMonitor<CallMyTradeOptions> _options;
 
     public TradingViewController(
         IValidator<TradingViewRequest> validator,
-        IPhoneCallHandler phoneCallHandler,
-        IOptionsMonitor<CallMyTradeOptions> options)
+        IPhoneCallHandler phoneCallHandler)
     {
         _validator = validator.MustNotBeNull();
         _phoneCallHandler = phoneCallHandler.MustNotBeNull();
-        _options = options.MustNotBeNull();
     }
 
     [HttpPost]

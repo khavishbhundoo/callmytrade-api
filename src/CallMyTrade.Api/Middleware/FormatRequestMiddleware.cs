@@ -1,7 +1,11 @@
+using System;
+using System.IO;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 using Core.CallMyTrade;
 using Core.CallMyTrade.Tradingview;
+using Microsoft.AspNetCore.Http;
 
 namespace CallMyTrade.Middleware;
 
