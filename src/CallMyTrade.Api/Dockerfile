@@ -11,4 +11,5 @@ RUN dotnet restore "CallMyTrade.Api/CallMyTrade.Api.csproj" -a $TARGETARCH && \
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
+USER $APP_UID 
 ENTRYPOINT ["dotnet", "CallMyTrade.Api.dll"]
