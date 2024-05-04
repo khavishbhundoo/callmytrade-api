@@ -1,22 +1,14 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
-WORKDIR /app
-EXPOSE 8080
-
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+﻿# Stage 1: Build environment
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 ARG BUILD_CONFIGURATION=Release
+ARG TARGETARCH
 WORKDIR /src
-COPY ["src/CallMyTrade.Api/CallMyTrade.Api.csproj", "src/CallMyTrade.Api/"]
-RUN dotnet restore "src/CallMyTrade.Api/CallMyTrade.Api.csproj"
-COPY . .
-WORKDIR "/src/src/CallMyTrade.Api"
-RUN dotnet build "CallMyTrade.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
+COPY /src .
+RUN dotnet restore "CallMyTrade.Api/CallMyTrade.Api.csproj" -a $TARGETARCH && \
+    dotnet publish --no-restore -a $TARGETARCH "CallMyTrade.Api/CallMyTrade.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "CallMyTrade.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
+# Stage 2: Runtime environment
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "CallMyTrade.Api.dll"]

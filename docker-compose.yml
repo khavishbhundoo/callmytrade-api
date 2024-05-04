@@ -4,3 +4,11 @@
     build:
       context: .
       dockerfile: src/CallMyTrade.Api/Dockerfile
+    x-bake:
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 80:8080
