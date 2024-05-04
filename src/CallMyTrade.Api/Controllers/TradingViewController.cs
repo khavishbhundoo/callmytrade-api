@@ -35,6 +35,7 @@ public sealed class TradingViewController : ControllerBase
     [Produces("application/json")]
     [Route("/tradingview")]
     [ProducesResponseType(typeof(PhoneCallResponse), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status415UnsupportedMediaType)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status422UnprocessableEntity)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status503ServiceUnavailable)]
@@ -71,7 +72,7 @@ public sealed class TradingViewController : ControllerBase
         }
         catch (Exception e)
         {
-            return StatusCode(StatusCodes.Status422UnprocessableEntity, new FailedResponse()
+            return StatusCode(StatusCodes.Status403Forbidden, new FailedResponse()
             {
                 ExceptionMessage = e.Message,
                 ExceptionStackTrace = e.StackTrace
