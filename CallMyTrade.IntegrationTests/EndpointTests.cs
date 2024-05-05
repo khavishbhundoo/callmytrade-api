@@ -40,7 +40,7 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
         }
         
         // Act
-        var response = await client.PostAsync(Constants.TradingViewServicePath, content);
+        var response = await client.PostAsync(Constants.TradingViewWebhookPath, content);
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -63,7 +63,7 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
             contentType);
 
         // Act
-        var response = await client.PostAsync(Constants.TradingViewServicePath, content);
+        var response = await client.PostAsync(Constants.TradingViewWebhookPath, content);
 
         // Assert
         response.StatusCode.ShouldBe(HttpStatusCode.UnsupportedMediaType);

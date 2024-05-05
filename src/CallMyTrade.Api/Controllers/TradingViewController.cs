@@ -24,7 +24,7 @@ public sealed class TradingViewController : ControllerBase
     [HttpPost]
     [Consumes("application/json")]
     [Produces("application/json")]
-    [Route(Constants.TradingViewServicePath)]
+    [Route(Constants.TradingViewWebhookPath)]
     [ProducesResponseType(typeof(PhoneCallResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status415UnsupportedMediaType)]

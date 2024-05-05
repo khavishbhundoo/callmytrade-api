@@ -20,7 +20,7 @@ public sealed class FormatRequestMiddleware
     
     public async Task Invoke(HttpContext context)
     {
-        if (context.Request.Path.Equals(Constants.TradingViewServicePath) && 
+        if (context.Request.Path.Equals(Constants.TradingViewWebhookPath) && 
             context.Request.ContentType != null && 
             context.Request.ContentType.StartsWith("text/plain", StringComparison.OrdinalIgnoreCase))
         {

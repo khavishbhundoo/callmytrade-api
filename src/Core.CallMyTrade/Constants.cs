@@ -2,5 +2,5 @@ namespace Core.CallMyTrade;
 
 public static class Constants
 {
-    public const string TradingViewServicePath = "/service/tradingView";
+    public const string TradingViewWebhookPath = "/webhook/tradingView";
 }

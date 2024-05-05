@@ -26,7 +26,7 @@ public sealed class ProtectEndpointMiddleware
     public async Task Invoke(HttpContext context)
     {
         // Check if the request path matches the specific route you want to validate
-        if (context.Request.Path.Equals(Constants.TradingViewServicePath))
+        if (context.Request.Path.Equals(Constants.TradingViewWebhookPath))
         {
             /*
              * Perform IP whitelisting
