@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Get the name of the branch being pushed to
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Get the list of refs being pushed
+while read local_ref local_sha remote_ref remote_sha
+do
+    if [[ $remote_ref == refs/tags/* ]]; then
+        tag_name=${remote_ref#refs/tags/}
+
+        # Check if the tag is a final release (semver without pre-release)
+        if [[ $tag_name =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            # Check if pushing to a branch other than main/master
+            if [[ $branch != "main" && $branch != "master" ]]; then
+                echo "Error: Final tags can only be pushed to 'main' or 'master' branch."
+                exit 1
+            fi
+        fi
+    fi
+done
+
+# If all checks pass, allow the push
+exit 0
