@@ -23,6 +23,10 @@ jobs:
         with:
           fetch-depth: '0'
           
+      - name: Generate tag and labels for the docker image
+        id: meta
+        uses: docker/metadata-action@v5
+          
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v4
         with:
