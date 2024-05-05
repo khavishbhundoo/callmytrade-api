@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Core.CallMyTrade;
-using Microsoft.AspNetCore.Http;
 using System.Text.Json;
 namespace CallMyTrade.Middleware;
 

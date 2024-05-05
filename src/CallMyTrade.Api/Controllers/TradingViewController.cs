@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
+
 using Core.CallMyTrade;
 using Core.CallMyTrade.Model;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
 using Light.GuardClauses;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CallMyTrade.Controllers;
