@@ -1,0 +1,65 @@
+name: Deploy to GHCR
+
+on:
+  push:
+    tags:
+       - '*'
+
+env:
+  GH_REPOSITORY: ghcr.io/${{ github.repository }}
+  IMAGE_TAG: ${{ github.ref_name }}
+
+jobs:
+  build:
+    name: Build & Push Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+           fetch-depth: '0'
+           ref: ${{ github.ref }}
+           
+      - name: 'Login to GitHub Container Registry'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Generate tag and labels for the docker image
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+         images: ${{ env.GH_REPOSITORY }}
+         tags: ${{ env.IMAGE_TAG }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Create Docker Cache Storage Backend
+        run: |
+            docker buildx create --use --driver=docker-container
+
+      - name: Build and load
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          load: true
+          tags: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
+      
+      - name: Scan for vulnerabilities
+        id: scan
+        uses: crazy-max/ghaction-container-scan@v3
+        with:
+          image: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
+          dockerfile: ./src/CallMyTrade.Api/Dockerfile
+
+      - name: Build multi platform image and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          platforms: 'linux/arm64,linux/amd64'
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+        
