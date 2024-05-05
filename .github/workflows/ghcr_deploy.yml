@@ -37,6 +37,8 @@ jobs:
         with:
          images: ${{ env.GH_REPOSITORY }}
          tags: ${{ env.IMAGE_TAG }}
+        env:
+          DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
