@@ -13,7 +13,8 @@ do
         if [[ $tag_name =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             # Check if pushing to a branch other than main/master
             if [[ $branch != "main" && $branch != "master" ]]; then
-                echo "Error: Final tags can only be pushed to 'main' or 'master' branch."
+                echo "Error: Final tags can only be pushed to 'main' or 'master' branch.Deleting the tag locally now."
+                git tag -d "${local_ref#refs/tags/}"
                 exit 1
             fi
         fi
