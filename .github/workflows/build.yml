@@ -1,0 +1,53 @@
+name: Build & Test
+on:
+  push:
+    branches:  
+      - main
+  
+  pull_request:
+    branches:
+      - main
+
+env:
+  DOTNET_VERSION: 8.0.x
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  DOTNET_INSTALL_DIR: "./.dotnet"
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+          
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+          
+      - name: Build & Test
+        run: |
+          dotnet restore
+          dotnet build --no-restore
+          dotnet test 
+      
+      - name: Build docker image locally
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: './src/CallMyTrade.Api/Dockerfile'
+          platforms: 'linux/amd64'
+          load: true
+          tags: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
+
+      - name: Scan for vulnerabilities
+        id: scan
+        uses: crazy-max/ghaction-container-scan@v3
+        with:
+          image: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
+          dockerfile: './src/CallMyTrade.Api/Dockerfile'
+          
+    
