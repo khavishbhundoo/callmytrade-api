@@ -14,7 +14,7 @@ public sealed class ContentTypeValidationMiddleware
     public async Task Invoke(HttpContext context)
     {
         // Check if the request path matches the specific route you want to validate
-        if (context.Request.Path.Equals("/tradingview"))
+        if (context.Request.Path.Equals(Constants.TradingViewServicePath))
         {
             // Perform content type validation
             if (context.Request.ContentType == null || 

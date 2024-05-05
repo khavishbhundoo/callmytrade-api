@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text;
+using Core.CallMyTrade;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Shouldly;
 
@@ -39,7 +40,7 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
         }
         
         // Act
-        var response = await client.PostAsync("/tradingview", content);
+        var response = await client.PostAsync(Constants.TradingViewServicePath, content);
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -62,7 +63,7 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
             contentType);
 
         // Act
-        var response = await client.PostAsync("/tradingview", content);
+        var response = await client.PostAsync(Constants.TradingViewServicePath, content);
 
         // Assert
         response.StatusCode.ShouldBe(HttpStatusCode.UnsupportedMediaType);

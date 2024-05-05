@@ -20,7 +20,7 @@ public sealed class FormatRequestMiddleware
     
     public async Task Invoke(HttpContext context)
     {
-        if (context.Request.Path.Equals("/tradingview") && 
+        if (context.Request.Path.Equals(Constants.TradingViewServicePath) && 
             context.Request.ContentType != null && 
             context.Request.ContentType.StartsWith("text/plain", StringComparison.OrdinalIgnoreCase))
         {
