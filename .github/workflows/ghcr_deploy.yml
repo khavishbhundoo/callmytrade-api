@@ -7,7 +7,6 @@ on:
 
 env:
   GH_REPOSITORY: ghcr.io/${{ github.repository }}
-  IMAGE_TAG: ${{ github.ref_name }}
   
 permissions:
     contents: read
@@ -33,10 +32,11 @@ jobs:
           
       - name: Generate tag and labels for the docker image
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
          images: ${{ env.GH_REPOSITORY }}
-         tags: ${{ env.IMAGE_TAG }}
+         tags: |
+           type=semver,pattern={{version}}
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
