@@ -8,6 +8,10 @@ on:
 env:
   GH_REPOSITORY: ghcr.io/${{ github.repository }}
   IMAGE_TAG: ${{ github.ref_name }}
+  
+permissions:
+    contents: read
+    packages: write
 
 jobs:
   build:
