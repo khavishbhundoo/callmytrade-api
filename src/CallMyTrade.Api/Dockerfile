@@ -1,5 +1,6 @@
 ﻿# Stage 1: Build environment
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
+LABEL org.opencontainers.image.source="https://github.com/khavishbhundoo/callmytrade-api"
 ARG BUILD_CONFIGURATION=Release
 ARG TARGETARCH
 WORKDIR /src
