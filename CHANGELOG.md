@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/khavishbhundoo/callmytrade-api/compare/v0.1.0...v0.1.1) (2024-05-07)
+
+
+### Miscellaneous Chores
+
+* release 0.1.0 ([f7d0725](https://github.com/khavishbhundoo/callmytrade-api/commit/f7d07258ca980b26df608f5a61fee7ebcde65aa2))
+* release 0.1.1 ([#18](https://github.com/khavishbhundoo/callmytrade-api/issues/18)) ([2bef9c5](https://github.com/khavishbhundoo/callmytrade-api/commit/2bef9c5e37a0ce9c56ea038b97b875b27d0022c9))
+
 ## [0.1.0](https://github.com/khavishbhundoo/callmytrade-api/tree/0.1.0) (2024-05-06)
 
 ### Features
