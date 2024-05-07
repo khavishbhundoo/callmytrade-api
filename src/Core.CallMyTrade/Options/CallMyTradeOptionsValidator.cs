@@ -9,55 +9,69 @@ public sealed class CallMyTradeOptionsValidator : AbstractValidator<CallMyTradeO
 {
     public CallMyTradeOptionsValidator()
     {
+        RuleLevelCascadeMode = CascadeMode.Stop;
+
         RuleFor(c => c.VoIpProvider)
-            .IsInEnum()
+            .NotEmpty()
             .When(c => c.Enabled)
-            .WithErrorCode("voIpProvider_invalid")
-            .WithMessage("The VoIPProvider is required and must contain a valid value. Valid values: Twilio");
+            .WithErrorCode(Constants.VoIpProviderInvalidErrorCode)
+            .WithMessage(Constants.VoIpProviderInvalidErrorMessage);
         
         RuleFor(c => c.VoIpProvidersOptions)
             .NotEmpty()
             .When(c => c.Enabled)
-            .WithErrorCode("VoIpProvidersOptions_required")
-            .WithMessage("The VoIpProvidersOptions must contain valid VoIPProvider settings for the VoIPProvider used");
+            .WithErrorCode(Constants.VoIpProvidersOptionsMissingErrorCode)
+            .WithMessage(Constants.VoIpProvidersOptionsMissingErrorMessage);
+        
+        /*RuleFor(c => c.VoIpProvidersOptions!.Twilio)
+            .NotEmpty()
+            .When(c => c.Enabled && c.VoIpProvider == VoIPProvider.Twilio)
+            .WithErrorCode("")
+            .WithMessage("");*/
         
         RuleFor(c => c.VoIpProvidersOptions!.Twilio!.TwilioAccountSid)
             .NotEmpty()
             .When(c => c.Enabled && c.VoIpProvider == VoIPProvider.Twilio)
-            .WithErrorCode("twilioAccountSid_required")
-            .WithMessage("The TwilioAccountSid is required when Twilio is the VoIPProvider");
+            .WithErrorCode(Constants.TwilioAccountSidMissingErrorCode)
+            .WithMessage(Constants.TwilioAccountSidMissingErrorMessage);
         
         RuleFor(c => c.VoIpProvidersOptions!.Twilio!.TwilioAuthToken)
             .NotEmpty()
             .When(c => c.Enabled && c.VoIpProvider == VoIPProvider.Twilio)
-            .WithErrorCode("twilioAuthToken_required")
-            .WithMessage("The TwilioAuthToken is required when Twilio is the VoIPProvider");
+            .WithErrorCode(Constants.TwilioAuthTokenMissingErrorCode)
+            .WithMessage(Constants.TwilioAuthTokenMissingErrorMessage);
 
         RuleFor(c => c.VoIpProvidersOptions!.Twilio!.FromPhoneNumber)
             .NotEmpty()
             .When(c => c.Enabled && c.VoIpProvider == VoIPProvider.Twilio)
-            .WithErrorCode("fromPhoneNumber_required")
-            .WithMessage(
-                "The Twilio FromPhoneNumber is required when Twilio is the VoIPProvider and is the phone number of the caller")
+            .WithErrorCode(Constants.TwilioFromPhoneNumberMissingErrorCode)
+            .WithMessage(Constants.TwilioFromPhoneNumberMissingErrorMessage)
             .Must(IsValidPhoneNumber)
-            .WithErrorCode("fromPhoneNumber_invalid")
-            .WithMessage("The Twilio FromPhoneNumber should be in an international format and be valid for the country associated with the number");
+            .WithErrorCode(Constants.TwilioFromPhoneNumberInvalidErrorCode)
+            .WithMessage(Constants.TwilioFromPhoneNumberInvalidErrorMessage);
         
         RuleFor(c => c.VoIpProvidersOptions!.Twilio!.ToPhoneNumber)
             .NotEmpty()
             .When(c => c.Enabled && c.VoIpProvider == VoIPProvider.Twilio)
-            .WithErrorCode("toPhoneNumber_required")
-            .WithMessage("The Twilio ToPhoneNumber is required when Twilio is the VoIPProvider and the phone number of the receiver")
+            .WithErrorCode(Constants.TwilioToPhoneNumberMissingErrorCode)
+            .WithMessage(Constants.TwilioToPhoneNumberMissingErrorMessage)
             .Must(IsValidPhoneNumber)
-            .WithErrorCode("toPhoneNumber_invalid")
-            .WithMessage("The Twilio ToPhoneNumber should be in an international format and be valid for the country associated with the number");
+            .WithErrorCode(Constants.TwilioToPhoneNumberInvalidErrorCode)
+            .WithMessage(Constants.TwilioToPhoneNumberInvalidErrorMessage);
     }
 
-    private bool IsValidPhoneNumber(string? value)
+    private static bool IsValidPhoneNumber(string? value)
     {
-        if (value.IsNullOrWhiteSpace() || !value.StartsWith('+')) return false;
-        var phoneNumberUtil = PhoneNumberUtil.GetInstance();
-        var phoneNumber = phoneNumberUtil.Parse(value, null);
-        return phoneNumberUtil.IsValidNumber(phoneNumber);
+        try
+        {
+            if (value.IsNullOrWhiteSpace() || !value.StartsWith('+')) return false;
+            var phoneNumberUtil = PhoneNumberUtil.GetInstance();
+            var phoneNumber = phoneNumberUtil.Parse(value, null);
+            return phoneNumberUtil.IsValidNumber(phoneNumber);
+        }
+        catch (Exception)
+        {
+            return false;
+        }
     }
 }
