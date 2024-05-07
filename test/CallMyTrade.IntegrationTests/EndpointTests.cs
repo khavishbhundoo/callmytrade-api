@@ -2,6 +2,8 @@ using System.Net;
 using System.Text;
 using Core.CallMyTrade;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Shouldly;
 
 namespace CallMyTrade.IntegrationTests;
@@ -71,5 +73,26 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
         response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
         var result = await response.Content.ReadAsStringAsync();
         result.ShouldNotBeNullOrEmpty();
+    }
+    
+    [Fact]
+    public void ShouldInvokeCallMyTradeOptionsValidationOnStartup()
+    {
+        //Arrange
+        var client = _webApplicationFactory.WithWebHostBuilder(builder =>
+        {
+            builder.ConfigureAppConfiguration((_, config) =>
+            {
+                var appsettings = new Dictionary<string, string>
+                {
+                    { "CallMyTrade:VoIpProvidersOptions:Twilio:TwilioAccountSid", "" }
+                };
+
+                config.AddInMemoryCollection(appsettings);
+            });
+        });
+        
+        //Act & Assert
+        Should.Throw<OptionsValidationException>(() =>{ client.CreateClient(); }).Message.ShouldBe("Fluent validation failed for 'CallMyTradeOptions.VoIpProvidersOptions.Twilio.TwilioAccountSid' with the error: 'The TwilioAccountSid is required when Twilio is the VoIPProvider'.");
     }
 }
