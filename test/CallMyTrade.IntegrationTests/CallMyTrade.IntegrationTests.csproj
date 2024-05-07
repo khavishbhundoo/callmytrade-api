@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\CallMyTrade.Api\CallMyTrade.Api.csproj" />
+      <ProjectReference Include="..\..\src\CallMyTrade.Api\CallMyTrade.Api.csproj" />
     </ItemGroup>
 
 </Project>

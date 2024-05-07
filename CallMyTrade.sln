@@ -5,18 +5,18 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallMyTrade.Api", "src\CallMyTrade.Api\CallMyTrade.Api.csproj", "{CA90B5D7-5697-480C-9B38-4EB0E90BF70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallMyTrade.UnitTests", "test\CallMyTrade.UnitTests\CallMyTrade.UnitTests.csproj", "{F9C2A6CD-33B6-4AB8-91D3-19A14F3BA674}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.CallMyTrade", "src\Core.CallMyTrade\Core.CallMyTrade.csproj", "{DA96707F-57F9-49B3-8CFD-0331E98B534F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.CallMyTrade.UnitTests", "test\Core.CallMyTrade.UnitTests\Core.CallMyTrade.UnitTests.csproj", "{E9CF94E5-4C79-4AC3-9E4F-A13B464FED92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallMyTrade.UnitTests", "test\CallMyTrade.UnitTests\CallMyTrade.UnitTests.csproj", "{F9C2A6CD-33B6-4AB8-91D3-19A14F3BA674}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallMyTrade.IntegrationTests", "test\CallMyTrade.IntegrationTests\CallMyTrade.IntegrationTests.csproj", "{EE7BAEDC-6578-450B-ADDF-9692A7F00A85}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C89BC81-A874-464C-B6AE-AE48E6FE6548}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallMyTrade.IntegrationTests", "CallMyTrade.IntegrationTests\CallMyTrade.IntegrationTests.csproj", "{90D0D65F-2E8D-4FC6-978B-B2635A2CB912}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,9 +43,9 @@ Global
 		{E9CF94E5-4C79-4AC3-9E4F-A13B464FED92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9CF94E5-4C79-4AC3-9E4F-A13B464FED92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9CF94E5-4C79-4AC3-9E4F-A13B464FED92}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90D0D65F-2E8D-4FC6-978B-B2635A2CB912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90D0D65F-2E8D-4FC6-978B-B2635A2CB912}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90D0D65F-2E8D-4FC6-978B-B2635A2CB912}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90D0D65F-2E8D-4FC6-978B-B2635A2CB912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7BAEDC-6578-450B-ADDF-9692A7F00A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7BAEDC-6578-450B-ADDF-9692A7F00A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7BAEDC-6578-450B-ADDF-9692A7F00A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7BAEDC-6578-450B-ADDF-9692A7F00A85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
