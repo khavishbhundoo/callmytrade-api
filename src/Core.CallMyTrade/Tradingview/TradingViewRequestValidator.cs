@@ -7,7 +7,7 @@ public class TradingViewRequestValidator : AbstractValidator<TradingViewRequest>
     {
         RuleFor(tvRequest => tvRequest.Text)
             .NotEmpty()
-            .WithErrorCode("text_required")
-            .WithMessage("The message to be said during phone call cannot be empty");
+            .WithErrorCode(Constants.VoiceMessageInvalidErrorCode)
+            .WithMessage(Constants.VoiceMessageInvalidErrorMessage);
     }
 }

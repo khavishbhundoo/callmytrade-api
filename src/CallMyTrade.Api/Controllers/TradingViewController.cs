@@ -12,13 +12,17 @@ public sealed class TradingViewController : ControllerBase
 {
     private readonly IValidator<TradingViewRequest> _validator;
     private readonly IPhoneCallHandler _phoneCallHandler;
+    private readonly TimeProvider _timeProvider;
 
     public TradingViewController(
         IValidator<TradingViewRequest> validator,
-        IPhoneCallHandler phoneCallHandler)
+        IPhoneCallHandler phoneCallHandler, 
+        TimeProvider timeProvider)
     {
+        
         _validator = validator.MustNotBeNull();
         _phoneCallHandler = phoneCallHandler.MustNotBeNull();
+        _timeProvider = timeProvider.MustNotBeNull();
     }
 
     [HttpPost]
@@ -72,7 +76,8 @@ public sealed class TradingViewController : ControllerBase
         
         return StatusCode(StatusCodes.Status201Created, new PhoneCallResponse()
         {
-            CallResponse = result
+            CallResponse = result,
+            UtcDateTime = _timeProvider.GetUtcNow().UtcDateTime
         });
     }
 }
