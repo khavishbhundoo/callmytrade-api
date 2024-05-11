@@ -1,7 +1,5 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Amazon;
-using Amazon.CloudWatchLogs;
 using CallMyTrade.Middleware;
 using CallMyTrade.Options;
 using Core.CallMyTrade;
@@ -9,10 +7,6 @@ using Core.CallMyTrade.Options;
 using Core.CallMyTrade.Services;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +20,10 @@ builder.Services.AddControllers()
             opts.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
             opts.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower;
         });
+
+
+//Add TimeProvider
+builder.Services.AddSingleton(TimeProvider.System);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

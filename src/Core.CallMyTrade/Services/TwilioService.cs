@@ -42,7 +42,7 @@ public sealed class TwilioService : IVoIPService
         catch (Exception e)
         {
             op.SetException(e);
-            op.Abandon();               
+            op.Abandon();
             throw;
         }
     }
