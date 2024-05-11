@@ -88,7 +88,7 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
                     { "CallMyTrade:VoIpProvidersOptions:Twilio:TwilioAccountSid", "" }
                 };
 
-                config.AddInMemoryCollection(appsettings);
+                config.AddInMemoryCollection(appsettings!);
             });
         });
         

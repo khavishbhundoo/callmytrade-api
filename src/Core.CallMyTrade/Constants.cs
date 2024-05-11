@@ -3,6 +3,8 @@ namespace Core.CallMyTrade;
 public static class Constants
 {
     public const string TradingViewWebhookPath = "/webhook/tradingview";
+    public const string VoiceMessageInvalidErrorCode = "text_required";
+    public const string VoiceMessageInvalidErrorMessage = "The message to be said during phone call cannot be empty";
     
     public const string VoIpProviderInvalidErrorCode = "voIpProvider_invalid";
     public const string VoIpProviderInvalidErrorMessage = "The VoIPProvider must contain a valid value. Valid values: Twilio";
