@@ -5,7 +5,10 @@
 
 ### Features
 
-* add health check endpoint ([#27](https://github.com/khavishbhundoo/callmytrade-api/issues/27)) ([544d4a4](https://github.com/khavishbhundoo/callmytrade-api/commit/544d4a40333ce261574dae7717f668fca9dfc665))
+* Add health check endpoint ([#27](https://github.com/khavishbhundoo/callmytrade-api/issues/27)) ([544d4a4](https://github.com/khavishbhundoo/callmytrade-api/commit/544d4a40333ce261574dae7717f668fca9dfc665))
+
+### Miscellaneous Chores
+* Add sample docker compose files for production
 
 ## [0.1.1](https://github.com/khavishbhundoo/callmytrade-api/compare/v0.1.0...v0.1.1) (2024-05-07)
 
