@@ -15,6 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallMyTrade.Api.UnitTests",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C89BC81-A874-464C-B6AE-AE48E6FE6548}"
 	ProjectSection(SolutionItems) = preProject
+		docker-compose.prod.yml = docker-compose.prod.yml
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject

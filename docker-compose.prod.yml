@@ -1,15 +1,8 @@
 ﻿services:
   callmytrade.api:
-    image: callmytrade.api
-    build:
-      context: .
-      dockerfile: src/CallMyTrade.Api/Dockerfile
-    x-bake:
-      platforms:
-        - linux/amd64
-        - linux/arm64
+    image: ghcr.io/khavishbhundoo/callmytrade-api:latest
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - CallMyTrade__Enabled=true
       - CallMyTrade__VoIpProvider=Twilio
       - CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAccountSid=AC70ed67c830a959ef708f6167c1ac6edc
