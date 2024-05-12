@@ -49,11 +49,16 @@ builder.Services.AddKeyedSingleton<IVoIPService, TwilioService>("Twilio");
 var awsOptions = builder.Configuration.GetAWSOptions();
 builder.Services.AddDefaultAWSOptions(awsOptions);
 
+//Health checks
+builder.Services.AddHealthChecks();
+
 //Serilog
 builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration));
 
 var app = builder.Build();
+
+app.MapHealthChecks("/_system/health");
 
 //Add support to logging request with SERILOG
 app.UseSerilogRequestLogging();
