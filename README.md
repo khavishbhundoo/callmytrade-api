@@ -20,8 +20,14 @@ the alert.
 - Testing: Unit tests, Integration tests & Acceptance tests
 - Package repository : GitHub Container Repository(GHCR)
 - Image URI: `ghcr.io/khavishbhundoo/callmytrade-api:latest`
+- TradingView Webhook endpoint: `/service/tradingview`
+- Health check endpoint: `/_system/health`
 
 ## Requirements
+
+### System Requirements
+
+CallMyTrade was built with a focus on high performance with minimal resource usage. 1 vCPU and around 256 MB of RAM should be enough and the app uses around ~60 MB of RAM when idle.
 
 ### Twilio
 1. Register on Twilio and reserve a phone number. The free trial will also work here.The phone number you get from Twilio  is the `FromPhoneNumber`.
@@ -60,6 +66,28 @@ services:
     ports:
       - 80:8080
 ```
+### Method 2 : Fly.io (Preferred Approach)
+
+Fly.io is a docker first serverless  Iaas platform that is very affordable and perfect for small projects like CallMyTrade since it will fit in [free allowances](https://fly.io/docs/about/pricing/#free-allowances) 
+The `fly.toml` is a sample deployment config you can use to deploy your own version of CallMyTrade in minutes. Fly.io will scale to ERO 
+
+1. Register on fly.io and add your credit card to get $5 worth of free credit
+2. Install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) for your OS of choice
+3. Run `fly auth login` to login to fly.io via commandline
+4. Run `fly launch --no-deploy` and use of the `fly.toml` config when prompted
+5. Run the following commands below to set environment variables in secrets and replace the sample values with your own details
+```
+fly secrets set ASPNETCORE_ENVIRONMENT=Production
+fly secrets set CallMyTrade__Enabled=true
+fly secrets set CallMyTrade__VoIpProvider=Twilio
+# REPLACE WITH YOUR OWN DETAILS
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__FromPhoneNumber=+15005550006
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__ToPhoneNumber=+23058121012
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAccountSid=ACc53a222fb24896f2c5aae1858a93888d
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAuthToken=682b5a9b2d86b20b525e8ea83900feaf
+# REPLACE WITH YOUR OWN DETAILS
+```
+6. Deploy the app with the `fly deploy`
 
 ## LICENSE
 
