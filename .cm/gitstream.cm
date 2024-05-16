@@ -25,3 +25,22 @@ automations:
         args:
           wait_for_all_checks: true
           squash_on_merge: true
+          
+# +----------------------------------------------------------------------------+
+# | Custom Expressions                                                         |
+# | https://docs.gitstream.cm/how-it-works/#custom-expressions                 |
+# +----------------------------------------------------------------------------+
+
+# https://docs.gitstream.cm/filter-functions/#estimatedreviewtime
+calc:
+  etr: {{ branch | estimatedReviewTime }}
+
+
+# These are all of the colors in GitHub's default label color palette.
+colors:
+  red: 'b60205'
+  orange: 'd93f0b'
+  yellow: 'fbca04'
+  green: '0e8a16'
+  blue: '1d76db'
+  purple: '5319e7'
