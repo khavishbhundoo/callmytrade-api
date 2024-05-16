@@ -34,6 +34,10 @@
           "section": "Build System"
         },
         {
+          "type": "docs",
+          "section": "Documentation updates"
+        },
+        {
           "type": "ci",
           "section": "Continuous Integration",
           "hidden": true
