@@ -32,6 +32,8 @@ builder.Services.AddHttpClient();
 
 //Add options
 builder.Services.AddOptions();
+builder.Services.AddOptions<ForwardedHeadersOptions>()
+    .BindConfiguration("ForwardedHeadersOptions");
 builder.Services.AddOptions<CallMyTradeOptions>()
     .BindConfiguration("CallMyTrade")
     .ValidateFluently()
