@@ -20,7 +20,7 @@ the alert.
 - Testing: Unit tests, Integration tests & Acceptance tests
 - Package repository : GitHub Container Repository(GHCR)
 - Image URI: `ghcr.io/khavishbhundoo/callmytrade-api:latest`
-- TradingView Webhook endpoint: `/service/tradingview`
+- TradingView Webhook endpoint: `/webhook/tradingview`
 - Health check endpoint: `/_system/health`
 
 ## Requirements
