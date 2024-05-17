@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.2.1...0.3.0) (2024-05-17)
+
+
+### Features
+
+* Get real client IP addresses behind proxies / loadbalancers ([#48](https://github.com/khavishbhundoo/callmytrade-api/issues/48)) ([6ba664c](https://github.com/khavishbhundoo/callmytrade-api/commit/6ba664cbf3ff76fb3e6dadb1ad960c9bec1d9e60))
+
+
+### Build
+
+* **deps:** bump AWSSDK.CloudWatchLogs from 3.7.305.32 to 3.7.305.33 ([#50](https://github.com/khavishbhundoo/callmytrade-api/issues/50)) ([81dad28](https://github.com/khavishbhundoo/callmytrade-api/commit/81dad287dd72a967af7f083611d856c576942a8c))
+* **deps:** bump libphonenumber-csharp from 8.13.36 to 8.13.37 ([#51](https://github.com/khavishbhundoo/callmytrade-api/issues/51)) ([8f332ac](https://github.com/khavishbhundoo/callmytrade-api/commit/8f332ac68db0adfe4331c6e774b9f2edcd57d429))
+* **deps:** bump linear-b/gitstream-github-action from 1 to 2 ([#49](https://github.com/khavishbhundoo/callmytrade-api/issues/49)) ([c31b04b](https://github.com/khavishbhundoo/callmytrade-api/commit/c31b04bf3ceb2d1aadff06a3f94e19c51c456d15))
+
 ## [0.2.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.2.0...0.2.1) (2024-05-16)
 
 
