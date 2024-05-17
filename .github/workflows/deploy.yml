@@ -1,4 +1,4 @@
-name: Deploy to GHCR
+name: Deploy to GHCR & Fly.io
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
 
 env:
   GH_REPOSITORY: ghcr.io/${{ github.repository }}
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
   
 permissions:
     contents: read
@@ -55,8 +56,6 @@ jobs:
           platforms: 'linux/amd64'
           load: true
           tags: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
-          build-args: |
-            "VERSION=${{ github.ref_name }}"
       
       - name: Scan for vulnerabilities
         id: scan
@@ -78,5 +77,11 @@ jobs:
           provenance: false
           build-args: |
             "VERSION=${{ github.ref_name }}"
+      
+      - name: Deploy app to fly.io
+        uses: superfly/flyctl-actions/setup-flyctl@master
+        run: flyctl deploy
+        with:
+          version: 1.5
 
         
