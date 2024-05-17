@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using CallMyTrade.Middleware;
@@ -7,11 +8,20 @@ using Core.CallMyTrade.Options;
 using Core.CallMyTrade.Services;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
+using Microsoft.AspNetCore.HttpOverrides;
 using Serilog;
+using IPNetwork = Microsoft.AspNetCore.HttpOverrides.IPNetwork;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<ForwardedHeadersOptions>(options => 
+{
+    options.ForwardedForHeaderName = "Fly-Client-IP";
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor;
+    options.KnownNetworks.Add(new IPNetwork(IPAddress.Any, 0)); 
+    options.KnownNetworks.Add(new IPNetwork(IPAddress.IPv6Any, 0)); 
+});
 
 builder.Services.AddControllers()
     .AddJsonOptions(
