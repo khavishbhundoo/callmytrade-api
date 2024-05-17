@@ -81,10 +81,10 @@ fly secrets set ASPNETCORE_ENVIRONMENT=Production
 fly secrets set CallMyTrade__Enabled=true
 fly secrets set CallMyTrade__VoIpProvider=Twilio
 # REPLACE WITH YOUR OWN DETAILS
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__FromPhoneNumber=+15005550006
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__ToPhoneNumber=+23058121012
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAccountSid=ACc53a222fb24896f2c5aae1858a93888d
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAuthToken=682b5a9b2d86b20b525e8ea83900feaf
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__FromPhoneNumber=+14108675310
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__ToPhoneNumber=+15005550006
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAccountSid=AC70ed67c830a959ef708f6167c1ac6edc
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAuthToken=1c8564ee33609cb1c845831f487e27ac
 # REPLACE WITH YOUR OWN DETAILS
 ```
 6. Deploy the app with the `fly deploy`
