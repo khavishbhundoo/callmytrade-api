@@ -46,6 +46,32 @@ CallMyTrade was built with a focus on high performance with minimal resource usa
 ## Deployment 
 The recommended way to deploy the API with your own VOIP details is through Docker.
 
+### Method 1  : Fly.io (Preferred Approach)
+
+Fly.io is a docker first serverless  Iaas platform that is very affordable and perfect for small projects like CallMyTrade since it will fit in [free allowances](https://fly.io/docs/about/pricing/#free-allowances)
+The `fly.toml` is a sample deployment config you can use to deploy your own version of CallMyTrade in minutes. Fly.io will scale to ERO
+
+1. Register on fly.io and add your credit card to get $5 worth of free credit
+2. Install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) for your OS of choice
+3. Run `fly auth login` to login to fly.io via commandline
+4. Run `fly launch --no-deploy` and use of the `fly.toml` config when prompted
+5. Run the following commands below to set environment variables in secrets and replace the sample values with your own details
+```
+fly secrets set ASPNETCORE_ENVIRONMENT=FlyIO
+fly secrets set CallMyTrade__Enabled=true
+fly secrets set CallMyTrade__VoIpProvider=Twilio
+# REPLACE WITH YOUR OWN DETAILS
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__FromPhoneNumber=+14108675310
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__ToPhoneNumber=+15005550006
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAccountSid=AC70ed67c830a959ef708f6167c1ac6edc
+fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAuthToken=1c8564ee33609cb1c845831f487e27ac
+# REPLACE WITH YOUR OWN DETAILS
+```
+6. Deploy the app with the `fly deploy`
+
+To view logs: `fly logs`
+Destroy app: `fly destroy` 
+
 ### Method 1 : Docker Compose
 Some cloud providers support `docker-compose.yml` deployments.For example in AWS can use Elastic Beanstalk service. 
 Create a `docker-compose.yml` as shown below and change details with your own.   
@@ -66,28 +92,7 @@ services:
     ports:
       - 80:8080
 ```
-### Method 2 : Fly.io (Preferred Approach)
 
-Fly.io is a docker first serverless  Iaas platform that is very affordable and perfect for small projects like CallMyTrade since it will fit in [free allowances](https://fly.io/docs/about/pricing/#free-allowances) 
-The `fly.toml` is a sample deployment config you can use to deploy your own version of CallMyTrade in minutes. Fly.io will scale to ERO 
-
-1. Register on fly.io and add your credit card to get $5 worth of free credit
-2. Install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) for your OS of choice
-3. Run `fly auth login` to login to fly.io via commandline
-4. Run `fly launch --no-deploy` and use of the `fly.toml` config when prompted
-5. Run the following commands below to set environment variables in secrets and replace the sample values with your own details
-```
-fly secrets set ASPNETCORE_ENVIRONMENT=Production
-fly secrets set CallMyTrade__Enabled=true
-fly secrets set CallMyTrade__VoIpProvider=Twilio
-# REPLACE WITH YOUR OWN DETAILS
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__FromPhoneNumber=+14108675310
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__ToPhoneNumber=+15005550006
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAccountSid=AC70ed67c830a959ef708f6167c1ac6edc
-fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAuthToken=1c8564ee33609cb1c845831f487e27ac
-# REPLACE WITH YOUR OWN DETAILS
-```
-6. Deploy the app with the `fly deploy`
 
 ## LICENSE
 
