@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text.Json;
+using Core.CallMyTrade;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace CallMyTrade;
@@ -26,6 +27,6 @@ internal static class HealthResponseWriter
             Version
         };
         context.Response.ContentType = "application/json; charset=utf-8";
-        return context.Response.WriteAsync(JsonSerializer.Serialize(response));
+        return context.Response.WriteAsync(JsonSerializer.Serialize(response, Utils.JsonSerializerOptions));
     }
 }
