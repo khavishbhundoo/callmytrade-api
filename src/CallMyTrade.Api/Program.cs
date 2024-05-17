@@ -1,6 +1,7 @@
 using System.Net;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using CallMyTrade;
 using CallMyTrade.Middleware;
 using CallMyTrade.Options;
 using Core.CallMyTrade;
@@ -8,6 +9,8 @@ using Core.CallMyTrade.Options;
 using Core.CallMyTrade.Services;
 using Core.CallMyTrade.Tradingview;
 using FluentValidation;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Serilog;
 using IPNetwork = Microsoft.AspNetCore.HttpOverrides.IPNetwork;
 
@@ -102,7 +105,10 @@ var app = builder.Build();
 
 app.UseForwardedHeaders();
 
-app.MapHealthChecks("/_system/health");
+app.MapHealthChecks("/_system/health", new HealthCheckOptions()
+{
+    ResponseWriter = HealthResponseWriter.WriteResponseAsync
+});
 
 //Add support to logging request with SERILOG
 app.UseSerilogRequestLogging();
