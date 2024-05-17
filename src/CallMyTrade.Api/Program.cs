@@ -68,6 +68,8 @@ builder.Host.UseSerilog((context, configuration) =>
 
 var app = builder.Build();
 
+app.UseForwardedHeaders();
+
 app.MapHealthChecks("/_system/health");
 
 //Add support to logging request with SERILOG
