@@ -1,4 +1,4 @@
-name: Deploy to GHCR
+name: Deploy to GHCR & Fly.io
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 env:
   GH_REPOSITORY: ghcr.io/${{ github.repository }}
-  
+
 permissions:
     contents: read
     packages: write
@@ -23,6 +23,18 @@ jobs:
            fetch-depth: '0'
            ref: ${{ github.ref }}
            
+      - name: SonarScanner for .NET 8 with pull request decoration support
+        uses: highbyte/sonarscan-dotnet@v2.3.2
+        with:
+          sonarProjectKey: callmytrade-api
+          sonarProjectName: callmytrade-api
+          sonarOrganization: khavishbhundoo
+          dotnetTestArguments: --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+          sonarBeginArguments: /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx"
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: 'Login to GitHub Container Registry'
         uses: docker/login-action@v3
         with:
@@ -74,5 +86,17 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           annotations: ${{ steps.meta.outputs.annotations }}
           provenance: false
+          build-args: |
+            "VERSION=${{ github.ref_name }}"
+            
+      - name: Install Fly CLI
+        run: |
+          curl -L https://fly.io/install.sh | sh
+          echo "/home/runner/.fly/bin" >> $GITHUB_PATH
+      
+      - name: Deploy app 
+        run: fly deploy
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
         

@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.3.1...0.3.2) (2024-05-18)
+
+
+### Build
+
+* generate code coverage with sonarscanner ([#58](https://github.com/khavishbhundoo/callmytrade-api/issues/58)) ([7d6ac56](https://github.com/khavishbhundoo/callmytrade-api/commit/7d6ac56a9463aa21febb53bbe167293cd1e327c6))
+
+## [0.3.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.3.0...0.3.1) (2024-05-17)
+
+
+### Build
+
+* add version in assembly ([#54](https://github.com/khavishbhundoo/callmytrade-api/issues/54)) ([f4a6fc3](https://github.com/khavishbhundoo/callmytrade-api/commit/f4a6fc3b1b0f01063b6e9de59ab2323a4fa8297a))
+
 ## [0.3.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.2.1...0.3.0) (2024-05-17)
 
 
