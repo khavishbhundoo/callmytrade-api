@@ -1,5 +1,11 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=callmytrade-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=callmytrade-api)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=callmytrade-api&metric=coverage)](https://sonarcloud.io/summary/new_code?id=callmytrade-api)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=callmytrade-api&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=callmytrade-api)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=callmytrade-api&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=callmytrade-api)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=callmytrade-api&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=callmytrade-api)
+
 # CallMyTrade API
-API service that will respond to `TradingView` webhooks and ring your mobile phone. Never miss an alert again
+API service that will respond to `TradingView` webhooks and give you a phone call. Never miss an alert again
 
 ## Motivation
 Trading is one of the hardest way to make money and one of the reasons for failure is FOMO leading to a bad entry.
@@ -49,7 +55,7 @@ The recommended way to deploy the API with your own VOIP details is through Dock
 ### Method 1  : Fly.io (Preferred Approach)
 
 Fly.io is a docker first serverless  Iaas platform that is very affordable and perfect for small projects like CallMyTrade since it will fit in [free allowances](https://fly.io/docs/about/pricing/#free-allowances)
-The `fly.toml` is a sample deployment config you can use to deploy your own version of CallMyTrade in minutes. Fly.io will scale to ERO
+The `fly.toml` is a sample deployment config you can use to deploy your own version of CallMyTrade in minutes. 
 
 1. Register on fly.io and add your credit card to get $5 worth of free credit
 2. Install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) for your OS of choice
@@ -72,7 +78,24 @@ fly secrets set CallMyTrade__VoIpProvidersOptions__Twilio__TwilioAuthToken=1c856
 To view logs: `fly logs`
 Destroy app: `fly destroy` 
 
-### Method 1 : Docker Compose
+Fly.io will scale to zero meaning that it will stop the app automatically when not in use which is 99.9% of the time in our use case to save costs. 
+When a trading view alert hits our webhook endpoint, fly.io will provision the infra again and CallMyTrade will then process the alert. The downside is that there will be a small delay in processing the request.
+
+```
+2024-05-17T07:50:30Z runner[91852903c72378] lax [info]Machine started in 498ms
+2024-05-17T07:50:31Z proxy[91852903c72378] lax [info]machine started in 1.503470705s
+2024-05-17T07:50:31Z proxy[91852903c72378] lax [info]machine became reachable in 6.093029ms
+2024-05-17T07:50:32Z app[91852903c72378] lax [info][07:50:32 INF] Making phoneCall to Twilio completed in 623.7 ms
+2024-05-17T07:50:32Z app[91852903c72378] lax [info][07:50:32 INF] HTTP POST /webhook/tradingview responded 201 in 734.0599 ms
+2024-05-17T07:50:37Z app[91852903c72378] lax [info][07:50:37 INF] HTTP GET /_system/health responded 200 in 5.9734 ms
+2024-05-17T07:50:38Z health[91852903c72378] lax [info]Health check on port 8080 is now passing.
+2024-05-17T07:50:57Z app[91852903c72378] lax [info][07:50:57 INF] HTTP GET /_system/health responded 200 in 0.2726 ms
+2024-05-17T07:50:58Z health[91852903c72378] lax [info]Health check on port 8080 is now passing.
+```
+
+From the logs we can see that the time taken to spin up the machine and process the request took ~2.2 seconds in the worst case scenario(1.5 s + 6.0 ms + 734 ms).As per [TradingView webhook docs](https://www.tradingview.com/support/solutions/43000529348-about-webhooks/), webhooks should not take more than 3 seconds to return a response.  
+In case this behaviour is not acceptable for your trading strategy then modify `fly.toml` to set `min_machines_running = 1`.
+### Method 2 : Docker Compose
 Some cloud providers support `docker-compose.yml` deployments.For example in AWS can use Elastic Beanstalk service. 
 Create a `docker-compose.yml` as shown below and change details with your own.   
 ```
