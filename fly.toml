@@ -20,12 +20,12 @@ primary_region = 'lax'
   min_machines_running = 0
   processes = ['app']
 
-  [[http_service.checks]]
-    interval = '30s'
-    timeout = '5s'
-    grace_period = '10s'
-    method = 'GET'
-    path = '/_system/health'
+[[http_service.checks]]
+interval = '30s'
+timeout = '5s'
+grace_period = '10s'
+method = 'GET'
+path = '/_system/health'
 
 [[vm]]
   size = 'shared-cpu-1x'
