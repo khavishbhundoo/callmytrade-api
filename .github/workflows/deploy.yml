@@ -77,11 +77,13 @@ jobs:
           provenance: false
           build-args: |
             "VERSION=${{ github.ref_name }}"
-      
-      - name: Deploy app to fly.io
+            
+      - name: Install Fly
         uses: superfly/flyctl-actions/setup-flyctl@master
-        run: flyctl deploy
         with:
           version: 1.5
+      
+      - name: Deploy app 
+        run: flyctl deploy
 
         
