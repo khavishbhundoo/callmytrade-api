@@ -6,7 +6,7 @@ namespace Core.CallMyTrade.UnitTests;
 
 public class TradingViewRequestValidatorTests
 {
-    private readonly IValidator<TradingViewRequest> _validator;
+    private readonly TradingViewRequestValidator _validator;
 
     public TradingViewRequestValidatorTests()
     {

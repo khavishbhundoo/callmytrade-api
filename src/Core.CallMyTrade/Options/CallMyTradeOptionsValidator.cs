@@ -23,12 +23,6 @@ public sealed class CallMyTradeOptionsValidator : AbstractValidator<CallMyTradeO
             .WithErrorCode(Constants.VoIpProvidersOptionsMissingErrorCode)
             .WithMessage(Constants.VoIpProvidersOptionsMissingErrorMessage);
         
-        /*RuleFor(c => c.VoIpProvidersOptions!.Twilio)
-            .NotEmpty()
-            .When(c => c.Enabled && c.VoIpProvider == VoIPProvider.Twilio)
-            .WithErrorCode("")
-            .WithMessage("");*/
-        
         RuleFor(c => c.VoIpProvidersOptions!.Twilio!.TwilioAccountSid)
             .NotEmpty()
             .When(c => c.Enabled && c.VoIpProvider == VoIPProvider.Twilio)

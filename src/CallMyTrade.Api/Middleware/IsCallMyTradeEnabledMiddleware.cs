@@ -21,7 +21,7 @@ public class IsCallMyTradeEnabledMiddleware
 
     public async Task Invoke(HttpContext context)
     {
-        if (_options.CurrentValue.Enabled != true)
+        if (!_options.CurrentValue.Enabled)
         {
             context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
             context.Response.ContentType = "application/json; charset=utf-8";
