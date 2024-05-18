@@ -1,4 +1,5 @@
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using Core.CallMyTrade;
@@ -144,6 +145,24 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
         
         //Act & Assert
         Should.Throw<OptionsValidationException>(() =>{ client.CreateClient(); }).Message.ShouldBe("Fluent validation failed for 'CallMyTradeOptions.VoIpProvidersOptions.Twilio.TwilioAccountSid' with the error: 'The TwilioAccountSid is required when Twilio is the VoIPProvider'.");
+    }
+    
+    [Fact]
+    public async Task GivenValidHealthCheckEndpointThenResponseShouldContainAssemblyVersion()
+    {
+        //Arrange
+        var client = _webApplicationFactory.CreateClient();
+
+        // Act
+        var response = await client.GetAsync(Constants.HealthCheckPath);
+        response.StatusCode.ShouldBe(HttpStatusCode.OK);
+        response.Content.Headers.ContentType.ShouldNotBeNull();
+        response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
+        var result = await response.Content.ReadAsStringAsync();
+        var expectedAssemblyVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
+        expectedAssemblyVersion.ShouldNotBeNullOrEmpty();
+        result.ShouldNotBeNullOrEmpty();
+        result.ShouldContain($"\"version\": \"{expectedAssemblyVersion}\"");
     }
     
     [Fact]
