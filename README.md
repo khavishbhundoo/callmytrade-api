@@ -17,6 +17,17 @@ CallMyTrade is an API service that provide you with a webhook endpoint that you 
 occurs, CallMyTrade will then use Twilio as a VOIP provider to call your mobile phone and voice out the contents of 
 the alert.
 
+Existing online services like `Callhookpro` were not a good fit for multiple reasons:
+1. It does not have support for my country
+2. Rates were high considering it's a recurring monthly fee
+
+### Goals
+
+1. Pay only for what you use model
+2. Configurable with different VOIP Providers
+3. Docker first approach with minimal image size for performance and security reasons
+4. Easy to deploy and keep up to date in an automated manner with no downtime during deployment
+
 ## Tech Stack
 
 - API Framework: .NET 8
@@ -36,7 +47,7 @@ the alert.
 CallMyTrade was built with a focus on high performance with minimal resource usage. 1 vCPU and around 256 MB of RAM should be enough and the app uses around ~60 MB of RAM when idle.
 
 ### Twilio
-1. Register on Twilio and reserve a phone number. The free trial will also work here.The phone number you get from Twilio  is the `FromPhoneNumber`.
+1. Register on Twilio and reserve a phone number. The free trial will also work here.The phone number you get from Twilio  is the `FromPhoneNumber`. It is strongly recommended that you save this number as in "Emergency contacts" list so your phone will ring even in sleep / silent mode.   
 2. Get Twilio API Live credentials(Account-> API keys & tokens). You will need `Account SID` & `Auth token`. 
 3. Make sure the country from which your phone number is based of is selected in `Voice Geographic Permissions` found under the `Develop->Voice->Setting->Geo permissions`.
 4. Your phone number in full international format is the `ToPhoneNumber`.
@@ -55,7 +66,7 @@ The recommended way to deploy the API with your own VOIP details is through Dock
 ### Method 1  : Fly.io (Preferred Approach)
 
 Fly.io is a docker first serverless  Iaas platform that is very affordable and perfect for small projects like CallMyTrade since it will fit in [free allowances](https://fly.io/docs/about/pricing/#free-allowances)
-The `fly.toml` is a sample deployment config you can use to deploy your own version of CallMyTrade in minutes. 
+The `fly.toml` is a sample deployment config you can use to deploy your own version of CallMyTrade in minutes. It uses the blue/green deployment to ensure no downtime during deployment using the shared `shared-cpu-1x` instance.
 
 1. Register on fly.io and add your credit card to get $5 worth of free credit
 2. Install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) for your OS of choice
@@ -95,6 +106,7 @@ When a trading view alert hits our webhook endpoint, fly.io will provision the i
 
 From the logs we can see that the time taken to spin up the machine and process the request took ~2.2 seconds in the worst case scenario(1.5 s + 6.0 ms + 734 ms).As per [TradingView webhook docs](https://www.tradingview.com/support/solutions/43000529348-about-webhooks/), webhooks should not take more than 3 seconds to return a response.  
 In case this behaviour is not acceptable for your trading strategy then modify `fly.toml` to set `min_machines_running = 1`.
+
 ### Method 2 : Docker Compose
 Some cloud providers support `docker-compose.yml` deployments.For example in AWS can use Elastic Beanstalk service. 
 Create a `docker-compose.yml` as shown below and change details with your own.   
