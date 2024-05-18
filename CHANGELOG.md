@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/khavishbhundoo/callmytrade-api/compare/0.3.2...0.3.3) (2024-05-18)
+
+
+### Documentation updates
+
+* Add fly.io deployment steps and readme ([#61](https://github.com/khavishbhundoo/callmytrade-api/issues/61)) ([c9dc9f6](https://github.com/khavishbhundoo/callmytrade-api/commit/c9dc9f6af37d13a4c294be3296268baed61eb35f))
+
 ## [0.3.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.3.1...0.3.2) (2024-05-18)
 
 
