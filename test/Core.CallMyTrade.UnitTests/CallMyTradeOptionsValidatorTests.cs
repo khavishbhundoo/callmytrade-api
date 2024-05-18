@@ -7,7 +7,7 @@ namespace Core.CallMyTrade.UnitTests;
 
 public class CallMyTradeOptionsValidatorTests
 {
-    private readonly IValidator<CallMyTradeOptions> _validator;
+    private readonly CallMyTradeOptionsValidator _validator;
     
     public CallMyTradeOptionsValidatorTests()
     {
