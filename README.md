@@ -108,7 +108,7 @@ From the logs we can see that the time taken to spin up the machine and process 
 In case this behaviour is not acceptable for your trading strategy then modify `fly.toml` to set `min_machines_running = 1`.
 
 ### Method 2 : Docker Compose
-Some cloud providers support `docker-compose.yml` deployments.For example in AWS can use Elastic Beanstalk service. 
+Some cloud providers support `docker-compose.yml` deployments.For example in AWS you can use Elastic Beanstalk or Fargate service. 
 Create a `docker-compose.yml` as shown below and change details with your own.   
 ```
 services:
@@ -127,6 +127,10 @@ services:
     ports:
       - 80:8080
 ```
+
+
+## How to use the webhook
+Set the [webhook URL](https://www.tradingview.com/support/solutions/43000529348-about-webhooks/) in notifications in the alert window in Tradingview. Assuming your web host url is `https://awesomehost.com/` then the Webhook URL should be `https://awesomehost.com/webhook/tradingview`.
 
 
 ## LICENSE
