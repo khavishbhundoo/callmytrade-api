@@ -40,14 +40,6 @@ jobs:
           dotnet build --no-restore
           dotnet test --collect:"XPlat Code Coverage"
           
-      - name: SonarScanner for .NET 8 with pull request decoration support
-        uses: highbyte/sonarscan-dotnet@v2.3.2
-        with:
-          sonarProjectKey: callmytrade-api
-          sonarProjectName: callmytrade-api
-          sonarOrganization: khavishbhundoo
-          dotnetTestArguments: --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-          sonarBeginArguments: /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
