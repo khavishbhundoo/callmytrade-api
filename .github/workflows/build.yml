@@ -48,7 +48,7 @@ jobs:
       - name: Publish coverage summary
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-          path: coveragereport/Summary.md
+          path: coverage-report/Summary.md
       
       - name: Build docker image locally
         uses: docker/build-push-action@v5
