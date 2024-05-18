@@ -38,12 +38,17 @@ jobs:
           dotnet build --no-restore
           dotnet test --collect:"XPlat Code Coverage"
           
-      - name: ReportGenerator
+      - name: Generate code coverage report
         uses: danielpalme/ReportGenerator-GitHub-Action@5.3.0
         with:
           reports: '**/coverage.cobertura.xml'
           targetdir: 'coverage-report'
-          reporttypes: 'Cobertura'
+          reporttypes: 'HtmlInline;Cobertura;MarkdownSummary'
+          
+      - name: Publish coverage summary
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: coveragereport/Summary.md
       
       - name: Build docker image locally
         uses: docker/build-push-action@v5
