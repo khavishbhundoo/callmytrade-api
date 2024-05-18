@@ -34,7 +34,7 @@ Existing online services like `Callhookpro` were not a good fit for multiple rea
 - Containerization: Docker with Alpine Linux
 - Architectures: `linux/amd64`, `linux/arm64`
 - Testing Framework: xUnit 
-- Testing: Unit tests, Integration tests & Acceptance tests
+- Testing: Unit tests, Integration tests & Acceptance tests. Twilio `Test credentials` were used in integration and acceptance tests.
 - Package repository : GitHub Container Repository(GHCR)
 - Image URI: `ghcr.io/khavishbhundoo/callmytrade-api:latest`
 - TradingView Webhook endpoint: `/webhook/tradingview`
