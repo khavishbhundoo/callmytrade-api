@@ -107,6 +107,14 @@ When a trading view alert hits our webhook endpoint, fly.io will provision the i
 From the logs we can see that the time taken to spin up the machine and process the request took ~2.2 seconds in the worst case scenario(1.5 s + 6.0 ms + 734 ms).As per [TradingView webhook docs](https://www.tradingview.com/support/solutions/43000529348-about-webhooks/), webhooks should not take more than 3 seconds to return a response.  
 In case this behaviour is not acceptable for your trading strategy then modify `fly.toml` to set `min_machines_running = 1`.
 
+### How to update the app ?
+
+1. Find your app hostname with `fly status`
+2. Go to `https://YOUR_FLY_HOSTNAME/_system/health` to find out what version you are running.
+3. Check the [CHANGELOG](https://github.com/khavishbhundoo/callmytrade-api/blob/main/CHANGELOG.md) to see what versions have been released and the respective changes
+4. Run `fly deloy` to update to latest version
+
+
 ### Method 2 : Docker Compose
 Some cloud providers support `docker-compose.yml` deployments.For example in AWS you can use Elastic Beanstalk or Fargate service. 
 Create a `docker-compose.yml` as shown below and change details with your own.   
