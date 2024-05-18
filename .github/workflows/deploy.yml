@@ -37,13 +37,11 @@ jobs:
           dotnet restore
           dotnet build --no-restore
           dotnet test --nologo --results-directory testresults --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=lcov
-          mv testresults/*/coverage.info lcov.info
 
       - name: Publish coverage report to coveralls.io
         uses: coverallsapp/github-action@v2.3.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: lcov.info
       
       - name: 'Login to GitHub Container Registry'
         uses: docker/login-action@v3
