@@ -8,10 +8,7 @@ on:
 env:
   GH_REPOSITORY: ghcr.io/${{ github.repository }}
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-  DOTNET_VERSION: 8.0.x
-  DOTNET_CLI_TELEMETRY_OPTOUT: true
-  DOTNET_INSTALL_DIR: "./.dotnet"
-  
+
 permissions:
     contents: read
     packages: write
@@ -27,21 +24,16 @@ jobs:
            fetch-depth: '0'
            ref: ${{ github.ref }}
            
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v4
+      - name: SonarScanner for .NET 8 with pull request decoration support
+        uses: highbyte/sonarscan-dotnet@v2.3.2
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
-
-      - name: Build & Test
-        run: |
-          dotnet restore
-          dotnet build --no-restore
-          dotnet test --nologo --results-directory testresults --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=lcov
-
-      - name: Publish coverage report to coveralls.io
-        uses: coverallsapp/github-action@v2.3.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          sonarProjectKey: callmytrade-api
+          sonarProjectName: callmytrade-api
+          dotnetTestArguments: --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+          sonarBeginArguments: /d:sonar.cs.opencover.reportsPaths="**/TestResults/**/coverage.opencover.xml" -d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx"
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: 'Login to GitHub Container Registry'
         uses: docker/login-action@v3
