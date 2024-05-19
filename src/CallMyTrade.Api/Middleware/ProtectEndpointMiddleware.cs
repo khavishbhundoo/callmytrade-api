@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Core.CallMyTrade;
+using Light.GuardClauses;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 
@@ -20,9 +21,11 @@ public sealed class ProtectEndpointMiddleware
         "52.32.178.7"
     ];
     
-    public ProtectEndpointMiddleware(RequestDelegate next)
+    public ProtectEndpointMiddleware(RequestDelegate next, IDiagnosticContext diagnosticContext)
     {
-        _next = next;
+        _diagnosticContext = diagnosticContext.MustNotBeNull();
+        _next = next.MustNotBeNull();
+       
     }
     
     public async Task Invoke(HttpContext context)
