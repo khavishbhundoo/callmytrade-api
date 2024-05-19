@@ -199,4 +199,27 @@ public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
         result.ShouldNotBeNullOrEmpty();
         result.ShouldBe(JsonSerializer.Serialize(failedResponse, Utils.JsonSerializerOptions));
     }
+    
+    [Fact]
+    public async Task GivenValidEndpointForTradingViewWithNoTextMessageThenReturnFailure()
+    {
+        // Arrange
+        var client = _webApplicationFactory.CreateClient();
+
+        StringContent? content = new(
+            " ",
+            Encoding.UTF8,
+            "text/plain");
+
+        // Act
+        var response = await client.PostAsync(Constants.TradingViewWebhookPath, content);
+
+        // Assert
+        response.StatusCode.ShouldBe(HttpStatusCode.UnprocessableContent);
+        response.Content.Headers.ContentType.ShouldNotBeNull();
+        response.Content.Headers.ContentType.ToString().ShouldBe("application/json; charset=utf-8");
+        var result = await response.Content.ReadAsStringAsync();
+        result.ShouldNotBeNullOrEmpty();
+        result.ShouldBe("{\"validation_errors\":[{\"error_code\":\"text_required\",\"error_message\":\"The message to be said during phone call cannot be empty\"}]}");
+    }
 }
