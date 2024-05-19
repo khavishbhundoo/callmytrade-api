@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.0...0.4.1) (2024-05-19)
+
+
+### Bug fixes
+
+* enrich logs in middlewares ([#70](https://github.com/khavishbhundoo/callmytrade-api/issues/70)) ([e67f921](https://github.com/khavishbhundoo/callmytrade-api/commit/e67f921b72b169dca2ef2109bf31d8e2dc5aa01a))
+
 ## [0.4.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.3.3...0.4.0) (2024-05-19)
 
 
