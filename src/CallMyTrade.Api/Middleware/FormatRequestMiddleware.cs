@@ -1,11 +1,9 @@
-using System;
-using System.IO;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using Core.CallMyTrade;
 using Core.CallMyTrade.Tradingview;
-using Microsoft.AspNetCore.Http;
+using Light.GuardClauses;
+
 
 namespace CallMyTrade.Middleware;
 
@@ -15,7 +13,7 @@ public sealed class FormatRequestMiddleware
 
     public FormatRequestMiddleware(RequestDelegate next)
     {
-        _next = next;
+        _next = next.MustNotBeNull();
     }
     
     public async Task Invoke(HttpContext context)
