@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.4.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.3.3...0.4.0) (2024-05-19)
+
+
+### Features
+
+* enrich logs with request & response ([#69](https://github.com/khavishbhundoo/callmytrade-api/issues/69)) ([2b162cc](https://github.com/khavishbhundoo/callmytrade-api/commit/2b162cc491f010593632fa164b6a92cdb8f3b8d3))
+
+
+### Bug fixes
+
+* exclude test projects from code coverage and minor refactoring ([#63](https://github.com/khavishbhundoo/callmytrade-api/issues/63)) ([88d7833](https://github.com/khavishbhundoo/callmytrade-api/commit/88d78336d556c8b644fea9eb4f939da1b66589b4))
+
+
+### Documentation updates
+
+* Add instructions on how to update the app ([#65](https://github.com/khavishbhundoo/callmytrade-api/issues/65)) ([8b2a329](https://github.com/khavishbhundoo/callmytrade-api/commit/8b2a329b7cee2106f7b8610f198102d125b3dd6f))
+
 ## [0.3.3](https://github.com/khavishbhundoo/callmytrade-api/compare/0.3.2...0.3.3) (2024-05-18)
 
 
