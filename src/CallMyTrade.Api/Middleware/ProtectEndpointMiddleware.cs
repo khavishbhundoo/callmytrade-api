@@ -3,11 +3,13 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Core.CallMyTrade;
 using Microsoft.AspNetCore.Http;
+using Serilog;
 
 namespace CallMyTrade.Middleware;
 
 public sealed class ProtectEndpointMiddleware
 {
+    private readonly IDiagnosticContext _diagnosticContext;
     private readonly RequestDelegate _next;
 
     private static readonly List<string?> ValidTradingViewIpAddresses =
@@ -47,6 +49,7 @@ public sealed class ProtectEndpointMiddleware
                         }
                     }
                 };
+                _diagnosticContext.Set("FailedResponse", failedResponse, true);
                 await context.Response.WriteAsync(JsonSerializer.Serialize(failedResponse, Utils.JsonSerializerOptions));
                 return;
             }

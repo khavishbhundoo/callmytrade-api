@@ -1,14 +1,20 @@
 using Core.CallMyTrade;
 using System.Text.Json;
+using Light.GuardClauses;
+using Serilog;
+
 namespace CallMyTrade.Middleware;
 
 public sealed class ContentTypeValidationMiddleware
 {
+    private readonly IDiagnosticContext _diagnosticContext;
     private readonly RequestDelegate _next;
 
-    public ContentTypeValidationMiddleware(RequestDelegate next)
+    public ContentTypeValidationMiddleware(RequestDelegate next, 
+        IDiagnosticContext diagnosticContext)
     {
-        _next = next;
+        _next = next.MustNotBeNull();
+        _diagnosticContext = diagnosticContext.MustNotBeNull();
     }
 
     public async Task Invoke(HttpContext context)
@@ -35,6 +41,7 @@ public sealed class ContentTypeValidationMiddleware
                         }
                     }
                 };
+                _diagnosticContext.Set("FailedResponse", failedResponse, true);
                 await context.Response.WriteAsync(JsonSerializer.Serialize(failedResponse, Utils.JsonSerializerOptions));
                 return;
             }
