@@ -9,6 +9,7 @@ using Serilog;
 
 namespace CallMyTrade.Controllers;
 
+[Route(Constants.TradingViewWebhookPath)]
 public sealed class TradingViewController : ControllerBase
 {
     private readonly IValidator<TradingViewRequest> _validator;
@@ -31,7 +32,6 @@ public sealed class TradingViewController : ControllerBase
     [HttpPost]
     [Consumes("application/json")]
     [Produces("application/json")]
-    [Route(Constants.TradingViewWebhookPath)]
     [ProducesResponseType(typeof(PhoneCallResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(FailedResponse), StatusCodes.Status415UnsupportedMediaType)]
