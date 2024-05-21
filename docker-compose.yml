@@ -1,5 +1,6 @@
 ﻿services:
   callmytrade.api:
+    container_name: callmytrade.api
     image: callmytrade.api
     build:
       context: .
@@ -18,3 +19,9 @@
       - CallMyTrade__VoIpProvidersOptions__Twilio__FromPhoneNumber=+15005550006
     ports:
       - 80:8080
+    networks:
+      - callmytrade-network
+  
+networks:
+  callmytrade-network:
+      name: callmytrade-network

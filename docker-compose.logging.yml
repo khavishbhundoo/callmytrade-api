@@ -1,0 +1,10 @@
+﻿services:
+  callmytrade.seq:
+    container_name: callmytrade.seq 
+    image: datalust/seq:latest
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:80
+    networks:
+      - callmytrade-network
