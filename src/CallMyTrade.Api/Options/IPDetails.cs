@@ -1,6 +1,6 @@
 namespace CallMyTrade.Options;
 
-public class IPDetails
+internal sealed class IPDetails
 {
     public string? Prefix { get; set; }
     public string? PrefixLength { get; set; }

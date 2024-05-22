@@ -9,7 +9,7 @@ using Shouldly;
 
 namespace Core.CallMyTrade.UnitTests;
 
-public class TwilioServiceTests
+public sealed class TwilioServiceTests
 {
     private readonly IVoIPService _sut;
     private readonly IOptionsMonitor<CallMyTradeOptions> _options;
