@@ -4,7 +4,7 @@ using Shouldly;
 
 namespace Core.CallMyTrade.UnitTests;
 
-public class TradingViewRequestValidatorTests
+public sealed class TradingViewRequestValidatorTests
 {
     private readonly TradingViewRequestValidator _validator;
 

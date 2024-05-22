@@ -7,14 +7,15 @@ using Serilog;
 
 namespace CallMyTrade.Middleware;
 
-public class IsCallMyTradeEnabledMiddleware
+public sealed class IsCallMyTradeEnabledMiddleware
 {
     private readonly IOptionsMonitor<CallMyTradeOptions> _options;
     private readonly IDiagnosticContext _diagnosticContext;
     private readonly RequestDelegate _next;
     
 
-    public IsCallMyTradeEnabledMiddleware(IOptionsMonitor<CallMyTradeOptions> options,
+    public IsCallMyTradeEnabledMiddleware(
+        IOptionsMonitor<CallMyTradeOptions> options,
         IDiagnosticContext diagnosticContext,
         RequestDelegate next)
     {

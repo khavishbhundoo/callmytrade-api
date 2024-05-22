@@ -5,7 +5,7 @@ using Shouldly;
 
 namespace Core.CallMyTrade.UnitTests;
 
-public class CallMyTradeOptionsValidatorTests
+public sealed class CallMyTradeOptionsValidatorTests
 {
     private readonly CallMyTradeOptionsValidator _validator;
     

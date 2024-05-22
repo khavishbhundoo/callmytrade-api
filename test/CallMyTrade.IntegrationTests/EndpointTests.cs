@@ -11,7 +11,7 @@ using Shouldly;
 
 namespace CallMyTrade.IntegrationTests;
 
-public class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
+public sealed class EndpointTests : IClassFixture<WebApplicationFactory<Program>>
 {
     private readonly WebApplicationFactory<Program> _webApplicationFactory;
 

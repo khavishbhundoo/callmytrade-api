@@ -1,7 +1,7 @@
 using FluentValidation;
 namespace Core.CallMyTrade.Tradingview;
 
-public class TradingViewRequestValidator : AbstractValidator<TradingViewRequest> 
+public sealed class TradingViewRequestValidator : AbstractValidator<TradingViewRequest> 
 {
     public TradingViewRequestValidator()
     {

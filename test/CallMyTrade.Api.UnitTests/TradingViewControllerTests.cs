@@ -14,7 +14,7 @@ using Shouldly;
 
 namespace CallMyTrade.Api.UnitTests;
 
-public class TradingViewControllerTests
+public sealed class TradingViewControllerTests
 {
     private readonly IValidator<TradingViewRequest> _validator;
     private readonly IPhoneCallHandler _phoneCallHandler;
