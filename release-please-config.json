@@ -21,6 +21,10 @@
           "section": "Build"
         },
         {
+          "type": "refactor",
+          "section": "Refactoring"
+        },
+        {
           "type": "perf",
           "section": "Performance Improvements"
         },
