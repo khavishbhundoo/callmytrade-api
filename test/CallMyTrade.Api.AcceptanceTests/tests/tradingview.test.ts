@@ -11,7 +11,7 @@ const schema = z.object({
 
 const ENDPOINT = '/webhook/tradingview';
 
-describe(`POST Request ${HOST}${ENDPOINT} with plain text`, () => {
+describe(`POST successful request ${HOST}${ENDPOINT} with plain text`, () => {
     let response: Response;
     let body: { [key: string]: unknown };
 
@@ -23,6 +23,35 @@ describe(`POST Request ${HOST}${ENDPOINT} with plain text`, () => {
                 'Content-Type': 'text/plain'
             },
             body: 'BTCUSD Greater Than 9000'
+        });
+        body = await response.json();
+    }, BEFORE_ALL_TIMEOUT);
+
+    test('Should have response status 201', () => {
+        expect(response.status).toBe(201);
+    });
+
+    test('Should have content-type = application/json', () => {
+        expect(response.headers.get('Content-Type')).toBe('application/json; charset=utf-8');
+    });
+
+    test('Should have valid body schema', () => {
+        expect(() => schema.parse(body)).not.toThrowError();
+    });
+});
+
+describe(`POST successful request ${HOST}${ENDPOINT} with JSON`, () => {
+    let response: Response;
+    let body: { [key: string]: unknown };
+
+    beforeAll(async () => {
+        const url = `${HOST}${ENDPOINT}`;
+        response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: JSON.stringify({text: 'BTCUSD Greater Than 9000'})
         });
         body = await response.json();
     }, BEFORE_ALL_TIMEOUT);
