@@ -1,7 +1,13 @@
 name: Acceptance Tests
 
 on:
-  workflow_dispatch: # This allows the workflow to be triggered manually
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main 
 
 jobs:
   acceptance-tests:
