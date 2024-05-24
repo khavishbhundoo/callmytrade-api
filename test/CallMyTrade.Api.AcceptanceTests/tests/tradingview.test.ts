@@ -11,13 +11,19 @@ const schema = z.object({
 
 const ENDPOINT = '/webhook/tradingview';
 
-describe(`Request ${HOST}${ENDPOINT}`, () => {
+describe(`POST Request ${HOST}${ENDPOINT} with plain text`, () => {
     let response: Response;
     let body: { [key: string]: unknown };
 
     beforeAll(async () => {
         const url = `${HOST}${ENDPOINT}`;
-        response = await fetch(url);
+        response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            body: 'BTCUSD Greater Than 9000'
+        });
         body = await response.json();
     }, BEFORE_ALL_TIMEOUT);
 
