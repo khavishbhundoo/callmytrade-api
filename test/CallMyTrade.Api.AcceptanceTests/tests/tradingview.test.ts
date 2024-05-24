@@ -27,12 +27,12 @@ describe(`POST Request ${HOST}${ENDPOINT} with plain text`, () => {
         body = await response.json();
     }, BEFORE_ALL_TIMEOUT);
 
-    test('Should have response status 200', () => {
-        expect(response.status).toBe(200);
+    test('Should have response status 201', () => {
+        expect(response.status).toBe(201);
     });
 
     test('Should have content-type = application/json', () => {
-        expect(response.headers.get('Content-Type')).toBe('application/json');
+        expect(response.headers.get('Content-Type')).toBe('application/json; charset=utf-8');
     });
 
     test('Should have valid body schema', () => {
