@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.4.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.1...0.4.2) (2024-05-25)
+
+
+### Build
+
+* add seq to docker setup ([#76](https://github.com/khavishbhundoo/callmytrade-api/issues/76)) ([db8b823](https://github.com/khavishbhundoo/callmytrade-api/commit/db8b823ed1ece23c7c8ba036f00f34a8a272f734))
+* **deps:** bump AWSSDK.CloudWatchLogs from 3.7.305.33 to 3.7.305.34 ([#72](https://github.com/khavishbhundoo/callmytrade-api/issues/72)) ([de612b5](https://github.com/khavishbhundoo/callmytrade-api/commit/de612b5abfe25b7ff2eb519969ee38a10cd7f3a4))
+* **deps:** bump AWSSDK.CloudWatchLogs from 3.7.305.34 to 3.7.305.36 ([#85](https://github.com/khavishbhundoo/callmytrade-api/issues/85)) ([fa31e55](https://github.com/khavishbhundoo/callmytrade-api/commit/fa31e557185e756fbad71f3d3417224abc496d7a))
+* **deps:** bump AWSSDK.Core from 3.7.304.2 to 3.7.304.3 ([#73](https://github.com/khavishbhundoo/callmytrade-api/issues/73)) ([6837c79](https://github.com/khavishbhundoo/callmytrade-api/commit/6837c79ced2f0f07d4a765e9fba1e46a0cadfe4f))
+* **deps:** bump AWSSDK.Core from 3.7.304.3 to 3.7.304.5 ([#86](https://github.com/khavishbhundoo/callmytrade-api/issues/86)) ([0c9e260](https://github.com/khavishbhundoo/callmytrade-api/commit/0c9e260c1116eaec7739330cb136355f1ad29cb4))
+* **deps:** bump Microsoft.NET.Test.Sdk from 17.9.0 to 17.10.0 ([#83](https://github.com/khavishbhundoo/callmytrade-api/issues/83)) ([6e0f3aa](https://github.com/khavishbhundoo/callmytrade-api/commit/6e0f3aa9b5fb3f86c02e957c9390ebc13f1fca8e))
+* **deps:** bump Serilog.Sinks.AwsCloudWatch from 4.2.25 to 4.2.29 ([#74](https://github.com/khavishbhundoo/callmytrade-api/issues/74)) ([052128d](https://github.com/khavishbhundoo/callmytrade-api/commit/052128d0732d480ca12247f42239ac3ca908b434))
+* **deps:** bump Twilio from 7.0.5 to 7.1.0 ([#87](https://github.com/khavishbhundoo/callmytrade-api/issues/87)) ([e1b9324](https://github.com/khavishbhundoo/callmytrade-api/commit/e1b93243ec219c4e883153e842d6289c219fa0be))
+
+
+### Refactoring
+
+* sealed classes and minor cleanup ([#79](https://github.com/khavishbhundoo/callmytrade-api/issues/79)) ([0f5dd67](https://github.com/khavishbhundoo/callmytrade-api/commit/0f5dd678c68498af890780e99a5c8e4f55a395de))
+
 ## [0.4.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.0...0.4.1) (2024-05-19)
 
 
