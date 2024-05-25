@@ -1,0 +1,44 @@
+name: Acceptance Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  acceptance-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./test/CallMyTrade.Api.AcceptanceTests
+        
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: ./test/CallMyTrade.Api.AcceptanceTests/package.json
+
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build and run Docker Compose
+        run: |
+          docker-compose up -d --build
+       
+      - name: Run acceptance tests
+        run: npm run test
+
+      - name: Shutdown Docker Compose
+        if: always()
+        run: docker-compose down

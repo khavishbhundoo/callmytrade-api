@@ -140,6 +140,32 @@ services:
 ## How to use the webhook
 Set the [webhook URL](https://www.tradingview.com/support/solutions/43000529348-about-webhooks/) in notifications in the alert window in Tradingview. Assuming your web host url is `https://awesomehost.com/` then the Webhook URL should be `https://awesomehost.com/webhook/tradingview`.
 
+# Running locally
+
+1. Clone the repository
+2. Run `docker-compose up -d --build`
+
+# Running acceptance tests
+
+1. Clone the repository
+2. Run `docker-compose up -d --build`
+3. Navigate to `test/CallMyTrade.Api.AcceptanceTests`
+4. Run `npm install`
+5. Run `npm test`
+
+- To test with another HOST other than localhost
+ 
+`HOST=https://awesomehost.com npm test`
+
+- Run a single test or tests that match a specific filename (for example [tradingview.test.ts](https://vitest.dev/guide/filtering.html#test-filtering))
+
+`npm test tradingview`
+
+- Run tests in [UI watch mode](https://vitest.dev/guide/ui.html):
+
+`npm run test:ui`
+
+
 
 ## LICENSE
 

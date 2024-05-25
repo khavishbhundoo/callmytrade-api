@@ -1,0 +1,39 @@
+{
+  "name": "callmytrade-api",
+  "version": "1.0.0",
+  "description": "CallMyTrade API acceptance tests",
+  "keywords": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khavishbhundoo/callmytrade-api"
+  },
+  "author": "Khavish Anshudass Bhundoo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=21"
+  },
+  "type": "module",
+  "dependencies": {
+    "date-fns": "3.6.0",
+    "vitest": "1.6.0",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "2.6.11",
+    "@typescript-eslint/eslint-plugin": "7.8.0",
+    "@typescript-eslint/parser": "7.8.0",
+    "@vitest/ui": "1.6.0",
+    "eslint": "8.56.0",
+    "eslint-plugin-simple-import-sort": "12.1.0",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5"
+  },
+  "scripts": {
+    "format": "npx prettier --write .",
+    "lint": "eslint '**/*.{js,ts}'",
+    "lint:fix": "eslint --fix '**/*.{js,ts}'",
+    "test": "vitest run --pool=forks",
+    "test:ui": "vitest --ui"
+  }
+}
