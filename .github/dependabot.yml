@@ -11,6 +11,14 @@ updates:
     rebase-strategy: "auto"
     labels:
       - "Microsoft package updates"
+    groups:
+      nuget-dependencies:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: github-actions
     directory: "/"
@@ -27,3 +35,11 @@ updates:
     commit-message:
       prefix: "build"
       include: "scope"
+    groups:
+      npm-dependencies:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
