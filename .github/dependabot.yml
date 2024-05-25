@@ -1,21 +1,48 @@
 version: 2
 updates:
-- package-ecosystem: nuget
-  directory: "/"
-  schedule:
-    interval: daily
-  commit-message:
-    prefix: "build"
-    include: "scope"
-  open-pull-requests-limit: 25
-  rebase-strategy: "auto"
-  labels:
-    - "Microsoft package updates"
-    
-- package-ecosystem: "github-actions"
-  directory: "/"
-  schedule:
-    interval: "daily"
-  commit-message:
-    prefix: "build"
-    include: "scope"
+  - package-ecosystem: nuget
+    directory: "/"
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: "build"
+      include: "scope"
+    open-pull-requests-limit: 25
+    rebase-strategy: "auto"
+    labels:
+      - "Microsoft package updates"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: "build"
+      include: "scope"
+
+  - package-ecosystem: npm
+    directory: "/test/CallMyTrade.Api.AcceptanceTests"
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: "build"
+      include: "scope"
+
+groups:
+  nuget-updates:
+    patterns:
+      - "nuget"
+    labels:
+      - "nuget dependencies"
+
+  github-actions-updates:
+    patterns:
+      - "github-actions"
+    labels:
+      - "github actions dependencies"
+
+  npm-updates:
+    patterns:
+      - "npm"
+    labels:
+      - "npm dependencies"
