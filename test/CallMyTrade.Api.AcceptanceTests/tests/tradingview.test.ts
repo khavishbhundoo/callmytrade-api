@@ -90,7 +90,6 @@ describe(`POST failed request ${HOST}${ENDPOINT} with missing message as plainte
             headers: {
                 'Content-Type': 'text/plain'
             },
-            body: ''
         });
         body = await response.json();
     }, BEFORE_ALL_TIMEOUT);
