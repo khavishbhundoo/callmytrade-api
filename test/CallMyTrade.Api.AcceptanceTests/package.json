@@ -1,9 +1,8 @@
 {
   "name": "callmytrade-api",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "CallMyTrade API acceptance tests",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/khavishbhundoo/callmytrade-api"

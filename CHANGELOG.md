@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.3](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.2...0.4.3) (2024-05-25)
+
+
+### Build
+
+* **deps-dev:** bump eslint in /test/CallMyTrade.Api.AcceptanceTests ([#93](https://github.com/khavishbhundoo/callmytrade-api/issues/93)) ([e5f1765](https://github.com/khavishbhundoo/callmytrade-api/commit/e5f17655dcd12eb2da296645365452bf5da7e380))
+* **deps-dev:** bump the npm-dependencies group ([#92](https://github.com/khavishbhundoo/callmytrade-api/issues/92)) ([2ded198](https://github.com/khavishbhundoo/callmytrade-api/commit/2ded198276dd7f4eb9e2c53db24d4c8f03b2fd35))
+* **deps:** bump actions/setup-node from 3 to 4 ([#91](https://github.com/khavishbhundoo/callmytrade-api/issues/91)) ([c634634](https://github.com/khavishbhundoo/callmytrade-api/commit/c6346346b67cd82526fb0ac3f70b391df1c7478f))
+* **deps:** bump the nuget-dependencies group with 2 updates ([#94](https://github.com/khavishbhundoo/callmytrade-api/issues/94)) ([5e463b8](https://github.com/khavishbhundoo/callmytrade-api/commit/5e463b89dcb6d22a6fd86d3f1c89b68515aeed5e))
+
 ## [0.4.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.1...0.4.2) (2024-05-25)
 
 
