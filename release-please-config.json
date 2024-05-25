@@ -46,6 +46,13 @@
           "section": "Continuous Integration",
           "hidden": true
         }
+      ],
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "test/CallMyTrade.Api.AcceptanceTests/package.json",
+          "jsonpath": "$.version"
+        }
       ]
     }
   }
