@@ -107,3 +107,33 @@ describe(`POST failed request ${HOST}${ENDPOINT} with missing message as plainte
         expect(() => failedSchema.parse(body)).not.toThrowError();
     });
 });
+
+
+describe(`POST failed request ${HOST}${ENDPOINT} with missing message as JSON`, () => {
+    let response: Response;
+    let body: { [key: string]: unknown };
+
+    beforeAll(async () => {
+        const url = `${HOST}${ENDPOINT}`;
+        response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({text: ''})
+        });
+        body = await response.json();
+    }, BEFORE_ALL_TIMEOUT);
+
+    test('Should have response status 422', () => {
+        expect(response.status).toBe(422);
+    });
+
+    test('Should have content-type = application/json', () => {
+        expect(response.headers.get('Content-Type')).toBe('application/json; charset=utf-8');
+    });
+
+    test('Should have valid body schema', () => {
+        expect(() => failedSchema.parse(body)).not.toThrowError();
+    });
+});
