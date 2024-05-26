@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.3...0.4.4) (2024-05-26)
+
+
+### Build
+
+* specify TARGETPLATFORM in runtime step ([#98](https://github.com/khavishbhundoo/callmytrade-api/issues/98)) ([22ffedb](https://github.com/khavishbhundoo/callmytrade-api/commit/22ffedb0142adedeb5eb46b516409476de03d64a))
+
 ## [0.4.3](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.2...0.4.3) (2024-05-25)
 
 
