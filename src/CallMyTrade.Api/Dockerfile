@@ -10,7 +10,7 @@ RUN dotnet restore "CallMyTrade.Api/CallMyTrade.Api.csproj" -a ${TARGETARCH} && 
     dotnet publish --no-restore -a ${TARGETARCH} "CallMyTrade.Api/CallMyTrade.Api.csproj" -c ${BUILD_CONFIGURATION} -o /app/publish -p:Version=${VERSION}
 
 # Stage 2: Runtime environment
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
+FROM --platform=${TARGETPLATFORM} mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
 USER $APP_UID 
