@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.4.5](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.4...0.4.5) (2024-06-05)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group ([#100](https://github.com/khavishbhundoo/callmytrade-api/issues/100)) ([2afdcbc](https://github.com/khavishbhundoo/callmytrade-api/commit/2afdcbc5355b88c3ef8b7853ec445783a8a0a9df))
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 3 updates ([#112](https://github.com/khavishbhundoo/callmytrade-api/issues/112)) ([35295b4](https://github.com/khavishbhundoo/callmytrade-api/commit/35295b4b47eed516f791b8e7cd16eeba151c59e5))
+* **deps:** bump AWSSDK.CloudWatchLogs from 3.7.305.36 to 3.7.305.38 ([#103](https://github.com/khavishbhundoo/callmytrade-api/issues/103)) ([08280ec](https://github.com/khavishbhundoo/callmytrade-api/commit/08280ec3a55da3648569b504abe351bb276ed89d))
+* **deps:** bump AWSSDK.Core from 3.7.304.5 to 3.7.304.7 ([#104](https://github.com/khavishbhundoo/callmytrade-api/issues/104)) ([0a7796e](https://github.com/khavishbhundoo/callmytrade-api/commit/0a7796e14ccf3bdf8fb585d6bcadc69e388345c8))
+* **deps:** bump libphonenumber-csharp in the nuget-dependencies group ([#111](https://github.com/khavishbhundoo/callmytrade-api/issues/111)) ([c523cea](https://github.com/khavishbhundoo/callmytrade-api/commit/c523cea68c2663f6e7184f945e159c7b90dcdb6c))
+* **deps:** bump Microsoft.AspNetCore.Mvc.Testing ([#102](https://github.com/khavishbhundoo/callmytrade-api/issues/102)) ([6b151b3](https://github.com/khavishbhundoo/callmytrade-api/commit/6b151b307fbcf14c33d3f5b431fc742bf1f2ba21))
+
+
+### Documentation updates
+
+* add code of conduct ([#115](https://github.com/khavishbhundoo/callmytrade-api/issues/115)) ([9af568f](https://github.com/khavishbhundoo/callmytrade-api/commit/9af568f9f94b21443c13437c42a99b4401e9a35c))
+* add funding ([#113](https://github.com/khavishbhundoo/callmytrade-api/issues/113)) ([9d85bb4](https://github.com/khavishbhundoo/callmytrade-api/commit/9d85bb4c0ae990c95dbfb16abf087cf85351aa15))
+* update readme ([#114](https://github.com/khavishbhundoo/callmytrade-api/issues/114)) ([02f24c8](https://github.com/khavishbhundoo/callmytrade-api/commit/02f24c8a9619ec1474f6d33b4bd68579d6fccb18))
+
 ## [0.4.4](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.3...0.4.4) (2024-05-26)
 
 
