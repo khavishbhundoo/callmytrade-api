@@ -5,7 +5,7 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=callmytrade-api&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=callmytrade-api)
 
 # CallMyTrade API
-API service that will respond to `TradingView` webhooks and give you a phone call. Never miss an alert again
+API service that will act as a webhook and respond to `TradingView` request and give you a phone call. Never miss an alert again
 
 ## Motivation
 Trading is one of the hardest way to make money and one of the reasons for failure is FOMO leading to a bad entry.
@@ -24,7 +24,7 @@ Existing online services like `Callhookpro` were not a good fit for multiple rea
 ### Goals
 
 1. Pay only for what you use model
-2. Configurable with different VOIP Providers
+2. Configurable with different VOIP Providers(Only Twilio is support for now)
 3. Docker first approach with minimal image size for performance and security reasons
 4. Easy to deploy and keep up to date in an automated manner with no downtime during deployment
 
