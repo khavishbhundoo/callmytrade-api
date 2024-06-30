@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.6](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.5...0.4.6) (2024-06-19)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group ([#119](https://github.com/khavishbhundoo/callmytrade-api/issues/119)) ([0886404](https://github.com/khavishbhundoo/callmytrade-api/commit/088640413a2c1af7d13e27a573b57cf9b634fdc2))
+* **deps-dev:** bump the npm-dependencies group ([#124](https://github.com/khavishbhundoo/callmytrade-api/issues/124)) ([95b521e](https://github.com/khavishbhundoo/callmytrade-api/commit/95b521ebb11dbb22aba2b54a3bfc1b199799b504))
+* **deps:** bump braces ([#120](https://github.com/khavishbhundoo/callmytrade-api/issues/120)) ([318fe6a](https://github.com/khavishbhundoo/callmytrade-api/commit/318fe6aaf37b762cf100b431816cc04b268e60d6))
+* **deps:** bump docker/build-push-action from 5 to 6 ([#123](https://github.com/khavishbhundoo/callmytrade-api/issues/123)) ([4e7620c](https://github.com/khavishbhundoo/callmytrade-api/commit/4e7620ca7206bbe71e0511260328e7d14d97490d))
+* **deps:** bump libphonenumber-csharp in the nuget-dependencies group ([#122](https://github.com/khavishbhundoo/callmytrade-api/issues/122)) ([8927c1d](https://github.com/khavishbhundoo/callmytrade-api/commit/8927c1d72c9b2d4abbbc7ee720f70f3ec1cf14d9))
+* **deps:** bump Microsoft.Extensions.TimeProvider.Testing ([#121](https://github.com/khavishbhundoo/callmytrade-api/issues/121)) ([f7162f2](https://github.com/khavishbhundoo/callmytrade-api/commit/f7162f2d6470113fc5bc0f126cf8626a3f33d891))
+* **deps:** bump the nuget-dependencies group with 2 updates ([#116](https://github.com/khavishbhundoo/callmytrade-api/issues/116)) ([96293c6](https://github.com/khavishbhundoo/callmytrade-api/commit/96293c604dc0da97331c4ae055811f8d8bac8b79))
+* **deps:** bump the nuget-dependencies group with 2 updates ([#118](https://github.com/khavishbhundoo/callmytrade-api/issues/118)) ([8f0a957](https://github.com/khavishbhundoo/callmytrade-api/commit/8f0a957aec54aa8172ed2a01c8a6ebcd28dc0800))
+* **deps:** bump Twilio in the nuget-dependencies group ([#125](https://github.com/khavishbhundoo/callmytrade-api/issues/125)) ([05ad17e](https://github.com/khavishbhundoo/callmytrade-api/commit/05ad17e579767f47cfbeeb0e385ff476d619f859))
+
 ## [0.4.5](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.4...0.4.5) (2024-06-05)
 
 
