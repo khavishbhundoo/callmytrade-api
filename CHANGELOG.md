@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.8](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.7...0.4.8) (2024-07-21)
+
+
+### Build
+
+* add log for multi arch build in dockerfile ([#146](https://github.com/khavishbhundoo/callmytrade-api/issues/146)) ([4204993](https://github.com/khavishbhundoo/callmytrade-api/commit/42049932b5d7743638125b11eda233abe0bf0bc3))
+
 ## [0.4.7](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.6...0.4.7) (2024-07-21)
 
 
