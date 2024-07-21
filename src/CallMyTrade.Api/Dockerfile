@@ -3,8 +3,8 @@ FROM --platform=${BUILDPLATFORM} mcr.microsoft.com/dotnet/sdk:8.0-alpine AS buil
 ARG BUILD_CONFIGURATION=Release
 ARG BUILDPLATFORM
 ARG TARGETPLATFORM
-RUN echo "I am building on ${BUILDPLATFORM}, building for ${TARGETPLATFORM} runtime"
 ARG TARGETARCH
+RUN echo "I am building on ${BUILDPLATFORM}, building for ${TARGETPLATFORM} runtime targetting ${TARGETARCH} arch"
 ARG VERSION=1.0.0
 ENV VERSION ${VERSION}
 WORKDIR /src
