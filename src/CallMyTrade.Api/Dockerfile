@@ -11,6 +11,7 @@ RUN dotnet restore "CallMyTrade.Api/CallMyTrade.Api.csproj" -a ${TARGETARCH} && 
 
 # Stage 2: Runtime environment
 FROM --platform=${TARGETPLATFORM} mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
+RUN echo "I am running on ${BUILDPLATFORM}, building for ${TARGETPLATFORM} runtime" 
 WORKDIR /app
 COPY --from=build /app/publish .
 USER $APP_UID 
