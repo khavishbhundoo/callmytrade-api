@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.4.7](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.6...0.4.7) (2024-07-21)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group ([#128](https://github.com/khavishbhundoo/callmytrade-api/issues/128)) ([1093e8e](https://github.com/khavishbhundoo/callmytrade-api/commit/1093e8e2bdeb1cc2e1b7b904cdec6c5abd20cb22))
+* **deps-dev:** bump the npm-dependencies group ([#137](https://github.com/khavishbhundoo/callmytrade-api/issues/137)) ([6d81a69](https://github.com/khavishbhundoo/callmytrade-api/commit/6d81a691c633ba8cfc6b229aba2f33df1cbf0e0b))
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 3 updates ([#145](https://github.com/khavishbhundoo/callmytrade-api/issues/145)) ([53b6b3d](https://github.com/khavishbhundoo/callmytrade-api/commit/53b6b3d03e85ed437f3eced20509a59b0b8b6329))
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 4 updates ([#134](https://github.com/khavishbhundoo/callmytrade-api/issues/134)) ([a5f3e72](https://github.com/khavishbhundoo/callmytrade-api/commit/a5f3e7239502728bd556e5d067e3038a23f501ca))
+* **deps-dev:** bump typescript ([#126](https://github.com/khavishbhundoo/callmytrade-api/issues/126)) ([b6a1f02](https://github.com/khavishbhundoo/callmytrade-api/commit/b6a1f02e9da0f8d765d1ee0b23423dd33e18a034))
+* **deps:** bump Serilog from 3.1.1 to 4.0.0 ([#108](https://github.com/khavishbhundoo/callmytrade-api/issues/108)) ([75e11ee](https://github.com/khavishbhundoo/callmytrade-api/commit/75e11ee11efd786a58d1ac1733353e4e43055cb5))
+* **deps:** bump Serilog.Settings.Configuration ([#142](https://github.com/khavishbhundoo/callmytrade-api/issues/142)) ([6ad6394](https://github.com/khavishbhundoo/callmytrade-api/commit/6ad6394b4f58aa475f74a219a744fd728c74fc36))
+* **deps:** bump Serilog.Sinks.Console from 5.0.1 to 6.0.0 ([#131](https://github.com/khavishbhundoo/callmytrade-api/issues/131)) ([0a99aca](https://github.com/khavishbhundoo/callmytrade-api/commit/0a99aca8a8ca0bce043ecefa29598858db8c63ec))
+* **deps:** bump Serilog.Sinks.Seq from 7.0.1 to 8.0.0 ([#130](https://github.com/khavishbhundoo/callmytrade-api/issues/130)) ([7b5f2d3](https://github.com/khavishbhundoo/callmytrade-api/commit/7b5f2d35c7bf03275cff42c6f882c54b9161e583))
+* **deps:** bump the nuget-dependencies group across 1 directory with 2 updates ([#135](https://github.com/khavishbhundoo/callmytrade-api/issues/135)) ([3b74d49](https://github.com/khavishbhundoo/callmytrade-api/commit/3b74d49538882eac18e1b8d4d104916e67143b34))
+* **deps:** bump the nuget-dependencies group across 1 directory with 4 updates ([#140](https://github.com/khavishbhundoo/callmytrade-api/issues/140)) ([5ce8ba1](https://github.com/khavishbhundoo/callmytrade-api/commit/5ce8ba17eb8f774c36806c8a53696c6438cc93f8))
+* **deps:** bump Twilio in the nuget-dependencies group ([#129](https://github.com/khavishbhundoo/callmytrade-api/issues/129)) ([f3e3a22](https://github.com/khavishbhundoo/callmytrade-api/commit/f3e3a226a96588fd8bdb68fe10df67192d02ae8e))
+
 ## [0.4.6](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.5...0.4.6) (2024-06-19)
 
 
