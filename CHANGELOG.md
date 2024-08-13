@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.4.9](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.8...0.4.9) (2024-08-13)
+
+
+### Build
+
+* **deps-dev:** bump @typescript-eslint/parser ([#158](https://github.com/khavishbhundoo/callmytrade-api/issues/158)) ([64927a1](https://github.com/khavishbhundoo/callmytrade-api/commit/64927a1b737335c10f6176f81cb0b1e9eda8a03b))
+* **deps-dev:** bump typescript ([#156](https://github.com/khavishbhundoo/callmytrade-api/issues/156)) ([d9ea0e2](https://github.com/khavishbhundoo/callmytrade-api/commit/d9ea0e2e17e3bd88646fd3f4cbbca701cff675b0))
+* **deps:** bump libphonenumber-csharp in the nuget-dependencies group ([#153](https://github.com/khavishbhundoo/callmytrade-api/issues/153)) ([4c6fb4a](https://github.com/khavishbhundoo/callmytrade-api/commit/4c6fb4ae57b1e3ba912873d05c9477a31838fce7))
+* **deps:** bump the nuget-dependencies group across 1 directory with 3 updates ([#151](https://github.com/khavishbhundoo/callmytrade-api/issues/151)) ([1c039cb](https://github.com/khavishbhundoo/callmytrade-api/commit/1c039cba71b270a33e39ba01251631a1655feba3))
+* **deps:** bump the nuget-dependencies group across 1 directory with 5 updates ([#160](https://github.com/khavishbhundoo/callmytrade-api/issues/160)) ([0aa3989](https://github.com/khavishbhundoo/callmytrade-api/commit/0aa39890c1f5978e2e4132504359aebce3199935))
+
 ## [0.4.8](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.7...0.4.8) (2024-07-21)
 
 
