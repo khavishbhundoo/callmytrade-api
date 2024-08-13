@@ -34,11 +34,11 @@ jobs:
       
       - name: Build and run Docker Compose
         run: |
-          docker-compose up -d --build
+          docker compose up -d --build
        
       - name: Run acceptance tests
         run: npm run test
 
       - name: Shutdown Docker Compose
         if: always()
-        run: docker-compose down
+        run: docker compose down
