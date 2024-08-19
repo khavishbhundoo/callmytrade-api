@@ -15,6 +15,7 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
     <PackageReference Include="IPNetwork2" Version="3.0.667" />
     <PackageReference Include="Light.GuardClauses" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
     <PackageReference Include="Serilog" Version="4.0.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.2" />
@@ -23,8 +24,8 @@
     <PackageReference Include="Serilog.Sinks.Datadog.Logs" Version="0.5.2" />
     <PackageReference Include="Serilog.Sinks.Seq" Version="8.0.0" />
     <PackageReference Include="SerilogTimings" Version="3.1.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.7.1" />
   </ItemGroup>
 
   <ItemGroup>
