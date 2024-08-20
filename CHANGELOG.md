@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.10](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.9...0.4.10) (2024-08-20)
+
+
+### Build
+
+* **deps:** bump Microsoft.NET.Test.Sdk in the nuget-dependencies group ([#164](https://github.com/khavishbhundoo/callmytrade-api/issues/164)) ([4f05895](https://github.com/khavishbhundoo/callmytrade-api/commit/4f058957a3de4597430d71050e8435ac3976919a))
+* **deps:** bump the nuget-dependencies group across 1 directory with 4 updates ([#162](https://github.com/khavishbhundoo/callmytrade-api/issues/162)) ([4905bcd](https://github.com/khavishbhundoo/callmytrade-api/commit/4905bcd1a3b09aae9ae4b008d6499ec554c44aeb))
+
 ## [0.4.9](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.8...0.4.9) (2024-08-13)
 
 
