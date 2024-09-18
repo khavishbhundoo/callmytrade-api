@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.11](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.10...0.4.11) (2024-09-18)
+
+
+### Build
+
+* **deps:** bump micromatch ([#169](https://github.com/khavishbhundoo/callmytrade-api/issues/169)) ([29f2c8a](https://github.com/khavishbhundoo/callmytrade-api/commit/29f2c8af1629ac1e76c04777f30b41687350e0f8))
+* **deps:** bump the nuget-dependencies group across 1 directory with 3 updates ([#172](https://github.com/khavishbhundoo/callmytrade-api/issues/172)) ([e207c00](https://github.com/khavishbhundoo/callmytrade-api/commit/e207c00205bc335d473628f3d6192892ecae00ff))
+* **deps:** bump the nuget-dependencies group across 1 directory with 6 updates ([#167](https://github.com/khavishbhundoo/callmytrade-api/issues/167)) ([1dbbbda](https://github.com/khavishbhundoo/callmytrade-api/commit/1dbbbda5957d5276879f29b1aa7cb0fcaf3b1715))
+* **deps:** bump Twilio in the nuget-dependencies group ([#174](https://github.com/khavishbhundoo/callmytrade-api/issues/174)) ([0767def](https://github.com/khavishbhundoo/callmytrade-api/commit/0767def09ca2fca3988bb839538416a9ab07d159))
+
 ## [0.4.10](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.9...0.4.10) (2024-08-20)
 
 
