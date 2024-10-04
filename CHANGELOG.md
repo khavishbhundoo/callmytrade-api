@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.12](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.11...0.4.12) (2024-10-04)
+
+
+### Build
+
+* **deps-dev:** bump typescript ([#171](https://github.com/khavishbhundoo/callmytrade-api/issues/171)) ([f1cbcef](https://github.com/khavishbhundoo/callmytrade-api/commit/f1cbcef170208167ea35b1f40fb1cc8e777c5df4))
+* **deps:** bump Serilog.Sinks.Datadog.Logs ([#175](https://github.com/khavishbhundoo/callmytrade-api/issues/175)) ([bc608df](https://github.com/khavishbhundoo/callmytrade-api/commit/bc608df4291641290bbe1853a981808d0bd9b5dd))
+* **deps:** bump the nuget-dependencies group across 1 directory with 6 updates ([#189](https://github.com/khavishbhundoo/callmytrade-api/issues/189)) ([4633318](https://github.com/khavishbhundoo/callmytrade-api/commit/46333183d8513ec8b3d8bb75c4a87d0701c587b9))
+* **deps:** bump vite ([#173](https://github.com/khavishbhundoo/callmytrade-api/issues/173)) ([68a1a1a](https://github.com/khavishbhundoo/callmytrade-api/commit/68a1a1a7a7b5f94df5cda1cb73e2e7adf349411a))
+
 ## [0.4.11](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.10...0.4.11) (2024-09-18)
 
 
