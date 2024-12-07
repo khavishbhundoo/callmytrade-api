@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.5.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.11...0.5.0) (2024-12-07)
+
+
+### Features
+
+* Add .NET 9 support ([#227](https://github.com/khavishbhundoo/callmytrade-api/issues/227)) ([0948f04](https://github.com/khavishbhundoo/callmytrade-api/commit/0948f04a17cffacf97f504c27b91b6600a9d3bcd))
+
+
+### Build
+
+* **deps-dev:** bump typescript ([#171](https://github.com/khavishbhundoo/callmytrade-api/issues/171)) ([f1cbcef](https://github.com/khavishbhundoo/callmytrade-api/commit/f1cbcef170208167ea35b1f40fb1cc8e777c5df4))
+* **deps:** bump date-fns in /test/CallMyTrade.Api.AcceptanceTests ([#179](https://github.com/khavishbhundoo/callmytrade-api/issues/179)) ([02c1188](https://github.com/khavishbhundoo/callmytrade-api/commit/02c1188633b5d058143cde4b3fa82696a3c9b030))
+* **deps:** bump highbyte/sonarscan-dotnet from 2.3.2 to 2.4.1 ([#211](https://github.com/khavishbhundoo/callmytrade-api/issues/211)) ([acdde0f](https://github.com/khavishbhundoo/callmytrade-api/commit/acdde0f3cf65d1085904338bbf37c3f276a418d9))
+* **deps:** bump rollup ([#182](https://github.com/khavishbhundoo/callmytrade-api/issues/182)) ([cf967be](https://github.com/khavishbhundoo/callmytrade-api/commit/cf967be0f54c94c4bbc87e19a8eccf2fa4926799))
+* **deps:** bump rollup ([#226](https://github.com/khavishbhundoo/callmytrade-api/issues/226)) ([02d181e](https://github.com/khavishbhundoo/callmytrade-api/commit/02d181e8f3782501f66ddace40dab1ce7241625b))
+* **deps:** bump Serilog.Sinks.Datadog.Logs ([#175](https://github.com/khavishbhundoo/callmytrade-api/issues/175)) ([bc608df](https://github.com/khavishbhundoo/callmytrade-api/commit/bc608df4291641290bbe1853a981808d0bd9b5dd))
+* **deps:** bump the nuget-dependencies group across 1 directory with 13 updates ([#225](https://github.com/khavishbhundoo/callmytrade-api/issues/225)) ([7054507](https://github.com/khavishbhundoo/callmytrade-api/commit/7054507ae4a698373e06085c90dbed8228b31894))
+* **deps:** bump the nuget-dependencies group across 1 directory with 6 updates ([#189](https://github.com/khavishbhundoo/callmytrade-api/issues/189)) ([4633318](https://github.com/khavishbhundoo/callmytrade-api/commit/46333183d8513ec8b3d8bb75c4a87d0701c587b9))
+* **deps:** bump vite ([#173](https://github.com/khavishbhundoo/callmytrade-api/issues/173)) ([68a1a1a](https://github.com/khavishbhundoo/callmytrade-api/commit/68a1a1a7a7b5f94df5cda1cb73e2e7adf349411a))
+
 ## [0.4.11](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.10...0.4.11) (2024-09-18)
 
 
