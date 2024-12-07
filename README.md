@@ -30,7 +30,7 @@ Existing online services like `Callhookpro` were not a good fit for multiple rea
 
 ## Tech Stack
 
-- API Framework: .NET 8
+- API Framework: .NET 9
 - Containerization: Docker with Alpine Linux
 - Architectures: `linux/amd64`, `linux/arm64`
 - Testing Framework: xUnit 
@@ -44,7 +44,7 @@ Existing online services like `Callhookpro` were not a good fit for multiple rea
 
 ### System Requirements
 
-CallMyTrade was built with a focus on high performance with minimal resource usage. 1 vCPU and around 256 MB of RAM should be enough and the app uses around ~60 MB of RAM when idle.
+CallMyTrade was built with a focus on high performance with minimal resource usage. 1 vCPU and around 256 MB of RAM should be enough and the app uses around ~35 MB of RAM when idle.
 
 ### Twilio
 1. Register on Twilio and reserve a phone number. The free trial will also work here.The phone number you get from Twilio  is the `FromPhoneNumber`. It is strongly recommended that you save this number as in "Emergency contacts" list so your phone will ring even in sleep / silent mode.   
