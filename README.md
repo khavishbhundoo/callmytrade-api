@@ -30,7 +30,7 @@ Existing online services like `Callhookpro` were not a good fit for multiple rea
 
 ## Tech Stack
 
-- API Framework: .NET 8
+- API Framework: .NET 9
 - Containerization: Docker with Alpine Linux
 - Architectures: `linux/amd64`, `linux/arm64`
 - Testing Framework: xUnit 
