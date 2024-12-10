@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.0...0.5.1) (2024-12-10)
+
+
+### Build
+
+* **deps:** bump Serilog and Serilog.Settings.Configuration ([#228](https://github.com/khavishbhundoo/callmytrade-api/issues/228)) ([1d9135f](https://github.com/khavishbhundoo/callmytrade-api/commit/1d9135ff2f8e7594cc6062d10f9d647703de918a))
+
 ## [0.5.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.11...0.5.0) (2024-12-07)
 
 
