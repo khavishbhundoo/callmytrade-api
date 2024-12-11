@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.5.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.0...0.5.1) (2024-12-11)
+
+
+### Build
+
+* **deps:** bump Serilog and Serilog.Settings.Configuration ([#228](https://github.com/khavishbhundoo/callmytrade-api/issues/228)) ([1d9135f](https://github.com/khavishbhundoo/callmytrade-api/commit/1d9135ff2f8e7594cc6062d10f9d647703de918a))
+* **deps:** bump Serilog, Serilog.AspNetCore, Serilog.Settings.Configuration, Serilog.Sinks.Console and Microsoft.Extensions.Options ([#233](https://github.com/khavishbhundoo/callmytrade-api/issues/233)) ([d5aa980](https://github.com/khavishbhundoo/callmytrade-api/commit/d5aa98092b4b4f4d6669ee05c275e7afa7a94deb))
+* **deps:** bump the npm_and_yarn group ([#231](https://github.com/khavishbhundoo/callmytrade-api/issues/231)) ([800be32](https://github.com/khavishbhundoo/callmytrade-api/commit/800be32702f32412a8b303d8272f0d23622f18bb))
+* **deps:** bump the npm-dependencies group across 1 directory with 4 updates ([#234](https://github.com/khavishbhundoo/callmytrade-api/issues/234)) ([f764d86](https://github.com/khavishbhundoo/callmytrade-api/commit/f764d86b21a86821a0647def90870fe251ae322c))
+* **deps:** bump the nuget-dependencies group with 2 updates ([#235](https://github.com/khavishbhundoo/callmytrade-api/issues/235)) ([0bac0f6](https://github.com/khavishbhundoo/callmytrade-api/commit/0bac0f689d2c505013cc1b7034abf32fc2fe4957))
+
 ## [0.5.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.4.11...0.5.0) (2024-12-07)
 
 
