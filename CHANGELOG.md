@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.1...0.5.2) (2024-12-23)
+
+
+### Build
+
+* **deps:** bump libphonenumber-csharp in the nuget-dependencies group ([#237](https://github.com/khavishbhundoo/callmytrade-api/issues/237)) ([26f9de6](https://github.com/khavishbhundoo/callmytrade-api/commit/26f9de6ff8afcfa3ecf6b311f53e5a263935a440))
+* **deps:** bump Serilog and Serilog.Sinks.Seq ([#241](https://github.com/khavishbhundoo/callmytrade-api/issues/241)) ([b8f69bf](https://github.com/khavishbhundoo/callmytrade-api/commit/b8f69bf84b2b1588d3886663dab65cd3c3f8f394))
+* **deps:** bump xunit.runner.visualstudio from 2.8.2 to 3.0.0 ([#240](https://github.com/khavishbhundoo/callmytrade-api/issues/240)) ([df3eb12](https://github.com/khavishbhundoo/callmytrade-api/commit/df3eb1286cf98f7ab1d688e7b4a9d94392b7e1c6))
+
 ## [0.5.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.0...0.5.1) (2024-12-11)
 
 
