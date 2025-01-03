@@ -1,6 +1,6 @@
 {
   "name": "callmytrade-api",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "CallMyTrade API acceptance tests",
   "keywords": [],
   "repository": {
@@ -16,17 +16,17 @@
   "dependencies": {
     "date-fns": "4.1.0",
     "vitest": "1.6.0",
-    "zod": "3.23.8"
+    "zod": "3.24.1"
   },
   "devDependencies": {
-    "@types/node-fetch": "2.6.11",
+    "@types/node-fetch": "2.6.12",
     "@typescript-eslint/eslint-plugin": "7.16.1",
     "@typescript-eslint/parser": "7.18.0",
     "@vitest/ui": "1.6.0",
     "eslint": "8.57.0",
     "eslint-plugin-simple-import-sort": "12.1.1",
-    "prettier": "3.3.3",
-    "typescript": "5.6.2"
+    "prettier": "3.4.2",
+    "typescript": "5.7.2"
   },
   "scripts": {
     "format": "npx prettier --write .",
