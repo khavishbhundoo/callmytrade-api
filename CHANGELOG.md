@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.2...0.5.3) (2025-01-03)
+
+
+### Build
+
+* **deps:** bump coverlet.collector in the nuget-dependencies group ([#243](https://github.com/khavishbhundoo/callmytrade-api/issues/243)) ([1f28556](https://github.com/khavishbhundoo/callmytrade-api/commit/1f28556ff6f440def45f6cf3808c2b241415957e))
+
 ## [0.5.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.1...0.5.2) (2024-12-23)
 
 
