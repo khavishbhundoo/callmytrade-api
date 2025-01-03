@@ -40,7 +40,7 @@ jobs:
           dotnet build --no-restore
           dotnet test --collect:"XPlat Code Coverage"
           
-      - name: SonarScanner for .NET 8 with pull request decoration support
+      - name: SonarScanner for .NET 9 with pull request decoration support
         uses: highbyte/sonarscan-dotnet@v2.4.1
         with:
           sonarProjectKey: callmytrade-api
