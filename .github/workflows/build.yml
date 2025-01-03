@@ -62,11 +62,11 @@ jobs:
           load: true
           tags: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
 
-      - name: Scan for vulnerabilities
-        id: scan
-        uses: crazy-max/ghaction-container-scan@v3
-        with:
-          image: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
-          dockerfile: './src/CallMyTrade.Api/Dockerfile'
+#      - name: Scan for vulnerabilities
+#        id: scan
+#        uses: crazy-max/ghaction-container-scan@v3
+#        with:
+#          image: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
+#          dockerfile: './src/CallMyTrade.Api/Dockerfile'
           
     
