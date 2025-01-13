@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.5](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.4...0.5.5) (2025-01-13)
+
+
+### Build
+
+* **deps-dev:** bump eslint ([#253](https://github.com/khavishbhundoo/callmytrade-api/issues/253)) ([112e7ae](https://github.com/khavishbhundoo/callmytrade-api/commit/112e7aec5d58cb3ac1dcc79fd43c8b867cf20f17))
+* **deps:** bump Twilio in the nuget-dependencies group ([#254](https://github.com/khavishbhundoo/callmytrade-api/issues/254)) ([71de29c](https://github.com/khavishbhundoo/callmytrade-api/commit/71de29ce3ae1a92b85bb8dd1d70caa63595d087c))
+
 ## [0.5.4](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.3...0.5.4) (2025-01-11)
 
 
