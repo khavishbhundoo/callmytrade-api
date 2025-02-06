@@ -50,3 +50,7 @@ updates:
         update-types:
           - "minor"
           - "patch"
+      vitest:
+        patterns:
+          - "vitest"
+          - "vitest/ui"
