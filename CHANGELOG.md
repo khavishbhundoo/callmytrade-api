@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.5.6](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.5...0.5.6) (2025-01-23)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group ([#256](https://github.com/khavishbhundoo/callmytrade-api/issues/256)) ([9cd6814](https://github.com/khavishbhundoo/callmytrade-api/commit/9cd6814c8e89e24770e0104ba547aa4fc862cdc0))
+* **deps-dev:** bump the npm-dependencies group ([#264](https://github.com/khavishbhundoo/callmytrade-api/issues/264)) ([362c61b](https://github.com/khavishbhundoo/callmytrade-api/commit/362c61be995afae1ed8bef12507240082450b4bb))
+* **deps:** bump the nuget-dependencies group across 1 directory with 2 updates ([#268](https://github.com/khavishbhundoo/callmytrade-api/issues/268)) ([a68d2ac](https://github.com/khavishbhundoo/callmytrade-api/commit/a68d2acf25dbc4cec1aa32a186b5eb6c3cdda2b1))
+* **deps:** bump the nuget-dependencies group with 3 updates ([#258](https://github.com/khavishbhundoo/callmytrade-api/issues/258)) ([9e39437](https://github.com/khavishbhundoo/callmytrade-api/commit/9e39437a3e34a395f4344e5c7d3dc323a75616cd))
+* **deps:** bump vite ([#267](https://github.com/khavishbhundoo/callmytrade-api/issues/267)) ([36ca116](https://github.com/khavishbhundoo/callmytrade-api/commit/36ca116b2ccd28703047d29d2f4d2ff5f7387115))
+
+## [0.5.5](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.4...0.5.5) (2025-01-13)
+
+
+### Build
+
+* **deps-dev:** bump eslint ([#253](https://github.com/khavishbhundoo/callmytrade-api/issues/253)) ([112e7ae](https://github.com/khavishbhundoo/callmytrade-api/commit/112e7aec5d58cb3ac1dcc79fd43c8b867cf20f17))
+* **deps:** bump Twilio in the nuget-dependencies group ([#254](https://github.com/khavishbhundoo/callmytrade-api/issues/254)) ([71de29c](https://github.com/khavishbhundoo/callmytrade-api/commit/71de29ce3ae1a92b85bb8dd1d70caa63595d087c))
+
+## [0.5.4](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.3...0.5.4) (2025-01-11)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 3 updates ([#251](https://github.com/khavishbhundoo/callmytrade-api/issues/251)) ([467fb6c](https://github.com/khavishbhundoo/callmytrade-api/commit/467fb6c26fc4788b4a3445aba63f9863d4330622))
+* **deps:** bump the nuget-dependencies group across 1 directory with 3 updates ([#250](https://github.com/khavishbhundoo/callmytrade-api/issues/250)) ([d8a458c](https://github.com/khavishbhundoo/callmytrade-api/commit/d8a458c474da58cd672dd75a10cbc6188a95fe01))
+
 ## [0.5.3](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.2...0.5.3) (2025-01-03)
 
 
