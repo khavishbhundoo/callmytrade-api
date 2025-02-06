@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.5.7](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.6...0.5.7) (2025-02-06)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group ([#280](https://github.com/khavishbhundoo/callmytrade-api/issues/280)) ([320d127](https://github.com/khavishbhundoo/callmytrade-api/commit/320d127ce4ba0d1f9f18908dae6586b07877e458))
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 3 updates ([#273](https://github.com/khavishbhundoo/callmytrade-api/issues/273)) ([37567c8](https://github.com/khavishbhundoo/callmytrade-api/commit/37567c829c27ff029ae185866a148c1d9016a547))
+* **deps:** bump IPNetwork2 in the nuget-dependencies group ([#277](https://github.com/khavishbhundoo/callmytrade-api/issues/277)) ([ad4b279](https://github.com/khavishbhundoo/callmytrade-api/commit/ad4b27981acd5285d922d1fd034a67d5df66dccc))
+* **deps:** bump libphonenumber-csharp in the nuget-dependencies group ([#276](https://github.com/khavishbhundoo/callmytrade-api/issues/276)) ([2a4de7e](https://github.com/khavishbhundoo/callmytrade-api/commit/2a4de7ec7acefe8b1783557719c880d6a12fb076))
+* **deps:** bump the nuget-dependencies group across 1 directory with 2 updates ([#274](https://github.com/khavishbhundoo/callmytrade-api/issues/274)) ([4ddfc97](https://github.com/khavishbhundoo/callmytrade-api/commit/4ddfc97d3194009c6640e3813c55b163081318db))
+* **deps:** Update vitest to 3.0.5 ([#283](https://github.com/khavishbhundoo/callmytrade-api/issues/283)) ([9633995](https://github.com/khavishbhundoo/callmytrade-api/commit/963399503bb40ce4ba61fe15ce9de38eeabec4ae))
+
 ## [0.5.6](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.5...0.5.6) (2025-01-23)
 
 
