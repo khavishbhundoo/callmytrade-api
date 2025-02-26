@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.9](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.8...0.5.9) (2025-02-26)
+
+
+### Build
+
+* **deps:** bump the npm-dependencies group across 1 directory with 6 updates ([#294](https://github.com/khavishbhundoo/callmytrade-api/issues/294)) ([bb36425](https://github.com/khavishbhundoo/callmytrade-api/commit/bb36425aa0551f72f9e9d1980cf1bff4c9c84295))
+* **deps:** bump the nuget-dependencies group across 1 directory with 8 updates ([#296](https://github.com/khavishbhundoo/callmytrade-api/issues/296)) ([75b7a23](https://github.com/khavishbhundoo/callmytrade-api/commit/75b7a2353eeed71d58fd644463536148afbf8daf))
+
 ## [0.5.8](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.7...0.5.8) (2025-02-18)
 
 
