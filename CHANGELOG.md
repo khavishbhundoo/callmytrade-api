@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.5.9](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.8...0.5.9) (2025-03-30)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 3 updates ([#304](https://github.com/khavishbhundoo/callmytrade-api/issues/304)) ([f084802](https://github.com/khavishbhundoo/callmytrade-api/commit/f0848029621332706dd2e8c0398b86afb5a7bfdb))
+* **deps:** bump highbyte/sonarscan-dotnet from 2.4.1 to 2.4.2 ([#307](https://github.com/khavishbhundoo/callmytrade-api/issues/307)) ([66054cf](https://github.com/khavishbhundoo/callmytrade-api/commit/66054cfb3cd3a734e1f9a66de0dca6cce824c284))
+* **deps:** bump libphonenumber-csharp from 8.13.55 to 9.0.0 ([#306](https://github.com/khavishbhundoo/callmytrade-api/issues/306)) ([f2ba7b8](https://github.com/khavishbhundoo/callmytrade-api/commit/f2ba7b8a5415f29df60472e31bcb6c5a74f8adef))
+* **deps:** bump the npm-dependencies group across 1 directory with 5 updates ([#314](https://github.com/khavishbhundoo/callmytrade-api/issues/314)) ([677533a](https://github.com/khavishbhundoo/callmytrade-api/commit/677533abcba3c78d15189d179b81aae317abe0e5))
+* **deps:** bump the npm-dependencies group across 1 directory with 6 updates ([#294](https://github.com/khavishbhundoo/callmytrade-api/issues/294)) ([bb36425](https://github.com/khavishbhundoo/callmytrade-api/commit/bb36425aa0551f72f9e9d1980cf1bff4c9c84295))
+* **deps:** bump the npm-dependencies group across 1 directory with 6 updates ([#300](https://github.com/khavishbhundoo/callmytrade-api/issues/300)) ([edd4e42](https://github.com/khavishbhundoo/callmytrade-api/commit/edd4e424a534bc7d6ab1c627d67eafe8706b4060))
+* **deps:** bump the nuget-dependencies group across 1 directory with 3 updates ([#317](https://github.com/khavishbhundoo/callmytrade-api/issues/317)) ([07ed4e9](https://github.com/khavishbhundoo/callmytrade-api/commit/07ed4e9424826856b99ad3d1349ac43bcd17ab1d))
+* **deps:** bump the nuget-dependencies group across 1 directory with 8 updates ([#296](https://github.com/khavishbhundoo/callmytrade-api/issues/296)) ([75b7a23](https://github.com/khavishbhundoo/callmytrade-api/commit/75b7a2353eeed71d58fd644463536148afbf8daf))
+* **deps:** bump the nuget-dependencies group with 2 updates ([#297](https://github.com/khavishbhundoo/callmytrade-api/issues/297)) ([b68b516](https://github.com/khavishbhundoo/callmytrade-api/commit/b68b516dfc67a7bfbdd587478c6d15f3fd331eb9))
+* **deps:** bump the nuget-dependencies group with 3 updates ([#305](https://github.com/khavishbhundoo/callmytrade-api/issues/305)) ([bc11ec5](https://github.com/khavishbhundoo/callmytrade-api/commit/bc11ec5a315597e7e216f7e498527ef9cdc07376))
+* **deps:** bump Twilio in the nuget-dependencies group ([#303](https://github.com/khavishbhundoo/callmytrade-api/issues/303)) ([f0c117d](https://github.com/khavishbhundoo/callmytrade-api/commit/f0c117dca39b432dd95a885bdd41f7e4b77d0070))
+* **deps:** bump vite ([#316](https://github.com/khavishbhundoo/callmytrade-api/issues/316)) ([2cf94aa](https://github.com/khavishbhundoo/callmytrade-api/commit/2cf94aad9611357c1775b460a1358c244ed20c9c))
+
 ## [0.5.8](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.7...0.5.8) (2025-02-18)
 
 
