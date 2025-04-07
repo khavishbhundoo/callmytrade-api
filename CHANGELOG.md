@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.0...0.6.1) (2025-04-07)
+
+
+### Build
+
+* **deps:** bump IPNetwork2 in the nuget-dependencies group ([#326](https://github.com/khavishbhundoo/callmytrade-api/issues/326)) ([5fbced3](https://github.com/khavishbhundoo/callmytrade-api/commit/5fbced3482abee7d51c30011110a2fc55845c102))
+
 ## [0.6.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.9...0.6.0) (2025-04-03)
 
 
