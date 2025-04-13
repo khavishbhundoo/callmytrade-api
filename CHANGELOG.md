@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.6.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.0...0.6.1) (2025-04-13)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 4 updates ([#325](https://github.com/khavishbhundoo/callmytrade-api/issues/325)) ([8d2676f](https://github.com/khavishbhundoo/callmytrade-api/commit/8d2676f6827a72cc7da949eedacf656d33c530b1))
+* **deps:** bump IPNetwork2 in the nuget-dependencies group ([#326](https://github.com/khavishbhundoo/callmytrade-api/issues/326)) ([5fbced3](https://github.com/khavishbhundoo/callmytrade-api/commit/5fbced3482abee7d51c30011110a2fc55845c102))
+* **deps:** bump the nuget-dependencies group across 1 directory with 7 updates ([#330](https://github.com/khavishbhundoo/callmytrade-api/issues/330)) ([74b3b85](https://github.com/khavishbhundoo/callmytrade-api/commit/74b3b85a266db6f333e6416aeeb2038d505064d3))
+* **deps:** bump vite ([#324](https://github.com/khavishbhundoo/callmytrade-api/issues/324)) ([0b2a740](https://github.com/khavishbhundoo/callmytrade-api/commit/0b2a740fbb643ddaf891f3a0df77717653eeee59))
+* **deps:** bump vite ([#331](https://github.com/khavishbhundoo/callmytrade-api/issues/331)) ([97924a4](https://github.com/khavishbhundoo/callmytrade-api/commit/97924a460c2fbfcfd8e7db0faf363a74e3c63a00))
+
 ## [0.6.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.9...0.6.0) (2025-04-03)
 
 
