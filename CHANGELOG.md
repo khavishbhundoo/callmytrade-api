@@ -1,5 +1,42 @@
 # Changelog
 
+## [0.6.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.1...0.6.2) (2025-05-01)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group ([#332](https://github.com/khavishbhundoo/callmytrade-api/issues/332)) ([a3b8848](https://github.com/khavishbhundoo/callmytrade-api/commit/a3b884870f8439d6677adf39a1841f9536893440))
+* **deps:** bump libphonenumber-csharp in the nuget-dependencies group ([#337](https://github.com/khavishbhundoo/callmytrade-api/issues/337)) ([f9363b2](https://github.com/khavishbhundoo/callmytrade-api/commit/f9363b2b75b24143aaf901afbfc81a83d2e0fe52))
+* **deps:** bump the npm-dependencies group across 1 directory with 5 updates ([#336](https://github.com/khavishbhundoo/callmytrade-api/issues/336)) ([ba97768](https://github.com/khavishbhundoo/callmytrade-api/commit/ba97768c4cbabe9e91808d12e8f884eacc98ea00))
+* **deps:** bump vite ([#339](https://github.com/khavishbhundoo/callmytrade-api/issues/339)) ([c123d25](https://github.com/khavishbhundoo/callmytrade-api/commit/c123d25fe01fa0f90db6577bbd30b0e07eb1c4e1))
+* **deps:** bump zod ([#334](https://github.com/khavishbhundoo/callmytrade-api/issues/334)) ([af51568](https://github.com/khavishbhundoo/callmytrade-api/commit/af515688672deb3ca5b1ae0c847c8232c152a78f))
+
+## [0.6.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.0...0.6.1) (2025-04-13)
+
+
+### Build
+
+* **deps-dev:** bump the npm-dependencies group across 1 directory with 4 updates ([#325](https://github.com/khavishbhundoo/callmytrade-api/issues/325)) ([8d2676f](https://github.com/khavishbhundoo/callmytrade-api/commit/8d2676f6827a72cc7da949eedacf656d33c530b1))
+* **deps:** bump IPNetwork2 in the nuget-dependencies group ([#326](https://github.com/khavishbhundoo/callmytrade-api/issues/326)) ([5fbced3](https://github.com/khavishbhundoo/callmytrade-api/commit/5fbced3482abee7d51c30011110a2fc55845c102))
+* **deps:** bump the nuget-dependencies group across 1 directory with 7 updates ([#330](https://github.com/khavishbhundoo/callmytrade-api/issues/330)) ([74b3b85](https://github.com/khavishbhundoo/callmytrade-api/commit/74b3b85a266db6f333e6416aeeb2038d505064d3))
+* **deps:** bump vite ([#324](https://github.com/khavishbhundoo/callmytrade-api/issues/324)) ([0b2a740](https://github.com/khavishbhundoo/callmytrade-api/commit/0b2a740fbb643ddaf891f3a0df77717653eeee59))
+* **deps:** bump vite ([#331](https://github.com/khavishbhundoo/callmytrade-api/issues/331)) ([97924a4](https://github.com/khavishbhundoo/callmytrade-api/commit/97924a460c2fbfcfd8e7db0faf363a74e3c63a00))
+
+## [0.6.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.9...0.6.0) (2025-04-03)
+
+
+### Features
+
+* reduce fly.io cold start with suspend ([#322](https://github.com/khavishbhundoo/callmytrade-api/issues/322)) ([d2279aa](https://github.com/khavishbhundoo/callmytrade-api/commit/d2279aa782f561304b72aa5ca58029a32e7d4616))
+
+
+### Build
+
+* **deps:** bump Light.GuardClauses from 12.0.0 to 13.0.0 ([#301](https://github.com/khavishbhundoo/callmytrade-api/issues/301)) ([6e9801b](https://github.com/khavishbhundoo/callmytrade-api/commit/6e9801bb7d677713d3dec93376dc38a029222c24))
+* **deps:** bump the npm-dependencies group ([#319](https://github.com/khavishbhundoo/callmytrade-api/issues/319)) ([d8f411d](https://github.com/khavishbhundoo/callmytrade-api/commit/d8f411df99b7ffb0c7701f35005570bcc238004d))
+* **deps:** bump the nuget-dependencies group with 2 updates ([#320](https://github.com/khavishbhundoo/callmytrade-api/issues/320)) ([b761f86](https://github.com/khavishbhundoo/callmytrade-api/commit/b761f86d6ba003ed1c963354d8d76c60d00dd7b1))
+* **deps:** bump vite ([#321](https://github.com/khavishbhundoo/callmytrade-api/issues/321)) ([9d94911](https://github.com/khavishbhundoo/callmytrade-api/commit/9d949116e9f6ba42cc3c432ad3c1b98a4bb4fbf1))
+
 ## [0.5.9](https://github.com/khavishbhundoo/callmytrade-api/compare/0.5.8...0.5.9) (2025-03-30)
 
 
