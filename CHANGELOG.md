@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.6.3](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.2...0.6.3) (2025-05-01)
+
+
+### Build
+
+* **deps:** bump AWSSDK.CloudWatchLogs and AWSSDK.Core ([#340](https://github.com/khavishbhundoo/callmytrade-api/issues/340)) ([a4b6ee4](https://github.com/khavishbhundoo/callmytrade-api/commit/a4b6ee4a5016ab8477d92be802a168caf6f1ea35))
+* **deps:** bump Swashbuckle.AspNetCore from 7.3.1 to 8.0.0 ([#312](https://github.com/khavishbhundoo/callmytrade-api/issues/312)) ([493717e](https://github.com/khavishbhundoo/callmytrade-api/commit/493717e54d6857ae2f2a28c878502cae31492c0d))
+* **deps:** bump Swashbuckle.AspNetCore.Annotations from 7.3.1 to 8.0.0 ([#311](https://github.com/khavishbhundoo/callmytrade-api/issues/311)) ([4a647cd](https://github.com/khavishbhundoo/callmytrade-api/commit/4a647cdfa282bc1eacea5b039c10737bd1c87001))
+
 ## [0.6.2](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.1...0.6.2) (2025-05-01)
 
 
