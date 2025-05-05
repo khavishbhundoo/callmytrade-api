@@ -12,7 +12,7 @@
     <PackageReference Include="AWSSDK.CloudWatchLogs" Version="4.0.1" />
     <PackageReference Include="AWSSDK.Core" Version="4.0.0.2" />
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="4.0.0" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
     <PackageReference Include="IPNetwork2" Version="3.1.764" />
     <PackageReference Include="Light.GuardClauses" Version="13.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.4" />
