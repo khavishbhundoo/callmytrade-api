@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.5](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.4...0.6.5) (2025-06-28)
+
+
+### Build
+
+* **deps:** bump FluentValidation from 11.11.0 to 12.0.0 ([#346](https://github.com/khavishbhundoo/callmytrade-api/issues/346)) ([33252b9](https://github.com/khavishbhundoo/callmytrade-api/commit/33252b96a03a6b2db88cab5d6425eaaa425c1cca))
+
 ## [0.6.4](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.3...0.6.4) (2025-06-28)
 
 
