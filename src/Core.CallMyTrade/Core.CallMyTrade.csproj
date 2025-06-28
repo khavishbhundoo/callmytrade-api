@@ -7,13 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="FluentValidation" Version="11.11.0" />
-      <PackageReference Include="libphonenumber-csharp" Version="9.0.4" />
+      <PackageReference Include="FluentValidation" Version="12.0.0" />
+      <PackageReference Include="libphonenumber-csharp" Version="9.0.8" />
       <PackageReference Include="Light.GuardClauses" Version="13.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.4" />
-      <PackageReference Include="Serilog" Version="4.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.6" />
+      <PackageReference Include="Serilog" Version="4.3.0" />
       <PackageReference Include="SerilogTimings" Version="3.1.0" />
-      <PackageReference Include="Twilio" Version="7.10.0" />
+      <PackageReference Include="Twilio" Version="7.11.3" />
     </ItemGroup>
 
 </Project>
