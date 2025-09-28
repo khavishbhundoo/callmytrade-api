@@ -16,17 +16,17 @@
   "dependencies": {
     "date-fns": "4.1.0",
     "vitest": "3.2.4",
-    "zod": "3.25.67"
+    "zod": "4.1.11"
   },
   "devDependencies": {
-    "@types/node-fetch": "2.6.12",
-    "@typescript-eslint/eslint-plugin": "8.35.0",
-    "@typescript-eslint/parser": "8.35.0",
+    "@types/node-fetch": "2.6.13",
+    "@typescript-eslint/eslint-plugin": "8.44.1",
+    "@typescript-eslint/parser": "8.44.1",
     "@vitest/ui": "3.2.4",
-    "eslint": "9.29.0",
+    "eslint": "9.36.0",
     "eslint-plugin-simple-import-sort": "12.1.1",
-    "prettier": "3.6.1",
-    "typescript": "5.8.3"
+    "prettier": "3.6.2",
+    "typescript": "5.9.2"
   },
   "scripts": {
     "format": "npx prettier --write .",
