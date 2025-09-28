@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.6.6](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.5...0.6.6) (2025-09-28)
+
+
+### Build
+
+* **deps:** bump actions/checkout from 4 to 5 ([#369](https://github.com/khavishbhundoo/callmytrade-api/issues/369)) ([6b2b826](https://github.com/khavishbhundoo/callmytrade-api/commit/6b2b826fd9c71f89d0314c1eb21062aebec6612f))
+* **deps:** bump actions/setup-dotnet from 4 to 5 ([#370](https://github.com/khavishbhundoo/callmytrade-api/issues/370)) ([99169bc](https://github.com/khavishbhundoo/callmytrade-api/commit/99169bc4b7c901212c5e83452a9d404e2bcf1481))
+* **deps:** bump actions/setup-node from 4 to 5 ([#371](https://github.com/khavishbhundoo/callmytrade-api/issues/371)) ([5f68edb](https://github.com/khavishbhundoo/callmytrade-api/commit/5f68edbdbe4cc985c74384332e0644c8f9e1024b))
+* **deps:** bump vite ([#372](https://github.com/khavishbhundoo/callmytrade-api/issues/372)) ([bb82048](https://github.com/khavishbhundoo/callmytrade-api/commit/bb82048e12e83336beac66b465ace6ae6ce9eed3))
+
 ## [0.6.5](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.4...0.6.5) (2025-08-03)
 
 
