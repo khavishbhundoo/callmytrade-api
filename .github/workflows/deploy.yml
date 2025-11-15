@@ -23,8 +23,8 @@ jobs:
            fetch-depth: '0'
            ref: ${{ github.ref }}
            
-      - name: SonarScanner for .NET 9 with pull request decoration support
-        uses: highbyte/sonarscan-dotnet@v2.4.2
+      - name: SonarScanner for .NET 10 with pull request decoration support
+        uses: highbyte/sonarscan-dotnet@v2.5.0
         with:
           sonarProjectKey: callmytrade-api
           sonarProjectName: callmytrade-api
