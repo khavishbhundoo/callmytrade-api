@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.7.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.7...0.7.0) (2025-11-15)
+
+
+### Features
+
+* Migrate to .NET 10 ([#386](https://github.com/khavishbhundoo/callmytrade-api/issues/386)) ([e8d22ea](https://github.com/khavishbhundoo/callmytrade-api/commit/e8d22eae12a8dd09ad19e535249228a235ff819b))
+
+
+### Build
+
+* **deps:** bump actions/setup-node from 5 to 6 ([#379](https://github.com/khavishbhundoo/callmytrade-api/issues/379)) ([f4de7a8](https://github.com/khavishbhundoo/callmytrade-api/commit/f4de7a80b671d8e08819ad3f877c95af8c90d05c))
+* **deps:** bump the npm-dependencies group across 1 directory with 5 updates ([#378](https://github.com/khavishbhundoo/callmytrade-api/issues/378)) ([5631375](https://github.com/khavishbhundoo/callmytrade-api/commit/563137502eb31e789fc1052f12cec93193a056b4))
+* **deps:** upgrade npm dependencies ([#389](https://github.com/khavishbhundoo/callmytrade-api/issues/389)) ([c231b9e](https://github.com/khavishbhundoo/callmytrade-api/commit/c231b9e864d3cfaf1e42705daff3d35fccfcb344))
+
 ## [0.6.7](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.6...0.6.7) (2025-09-28)
 
 
