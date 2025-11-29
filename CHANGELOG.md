@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/khavishbhundoo/callmytrade-api/compare/0.7.0...0.7.1) (2025-11-29)
+
+
+### Build
+
+* **deps:** bump actions/checkout from 5 to 6 ([#392](https://github.com/khavishbhundoo/callmytrade-api/issues/392)) ([5577c08](https://github.com/khavishbhundoo/callmytrade-api/commit/5577c087b7d21fed8ee99f7e9b973343002aad47))
+
 ## [0.7.0](https://github.com/khavishbhundoo/callmytrade-api/compare/0.6.7...0.7.0) (2025-11-15)
 
 
