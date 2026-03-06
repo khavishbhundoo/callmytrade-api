@@ -27,7 +27,7 @@ jobs:
           
       - name: Generate tag and labels for the docker image
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
           
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v5
